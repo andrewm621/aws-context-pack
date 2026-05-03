@@ -1,0 +1,1431 @@
+{
+  "version": 2,
+  "generatedAt": "2026-05-03T18:32:21.412Z",
+  "skillCount": 31,
+  "skills": {
+    "alb-nlb": {
+      "name": "alb-nlb",
+      "description": "Elastic Load Balancing guidance — ALB, NLB, target groups, health checks, SSL termination, path-based routing. Use when configuring load balancers for web applications or services.",
+      "priority": 4,
+      "pathPatterns": [
+        "loadbalancer/**",
+        "lb/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)loadbalancer/.*$",
+        "(?:^|/)lb/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+elbv2\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+elbv2\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-elastic-load-balancing-v2",
+        "aws-cdk-lib/aws-elasticloadbalancingv2"
+      ],
+      "promptSignals": [
+        "alb",
+        "nlb",
+        "load balancer",
+        "target group",
+        "application load balancer",
+        "network load balancer",
+        "health check",
+        "ssl termination"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/"
+      ]
+    },
+    "api-gateway": {
+      "name": "api-gateway",
+      "description": "Amazon API Gateway guidance — REST API, HTTP API, WebSocket API, authorization, throttling, custom domains. Use when building or configuring API endpoints on AWS.",
+      "priority": 7,
+      "pathPatterns": [
+        "api/**",
+        "apis/**",
+        "*-api.ts",
+        "*-api.js",
+        "openapi.yaml",
+        "openapi.yml",
+        "openapi.json",
+        "swagger.yaml",
+        "swagger.json"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)api/.*$",
+        "(?:^|/)apis/.*$",
+        "(?:^|/)[^/]*-api\\.ts$",
+        "(?:^|/)[^/]*-api\\.js$",
+        "(?:^|/)openapi\\.yaml$",
+        "(?:^|/)openapi\\.yml$",
+        "(?:^|/)openapi\\.json$",
+        "(?:^|/)swagger\\.yaml$",
+        "(?:^|/)swagger\\.json$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+apigateway\\b",
+        "\\baws\\s+apigatewayv2\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+apigateway\\b",
+        "\\baws\\s+apigatewayv2\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-api-gateway",
+        "@aws-sdk/client-apigatewayv2"
+      ],
+      "promptSignals": [
+        "api gateway",
+        "rest api",
+        "http api",
+        "websocket api",
+        "api endpoint",
+        "api throttling",
+        "api authorizer",
+        "custom domain"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/apigateway/latest/developerguide/"
+      ]
+    },
+    "app-runner": {
+      "name": "app-runner",
+      "description": "AWS App Runner guidance — fully managed container service, auto-scaling, custom domains, VPC connectors. Use when deploying web apps/APIs with minimal configuration.",
+      "priority": 4,
+      "pathPatterns": [
+        "apprunner/**",
+        "apprunner.yaml"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)apprunner/.*$",
+        "(?:^|/)apprunner\\.yaml$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+apprunner\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+apprunner\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-apprunner",
+        "aws-cdk-lib/aws-apprunner"
+      ],
+      "promptSignals": [
+        "app runner",
+        "apprunner",
+        "managed container",
+        "auto deploy container"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/apprunner/latest/dg/"
+      ]
+    },
+    "aws-architecture": {
+      "name": "aws-architecture",
+      "description": "AWS architecture guidance — Well-Architected Framework, multi-account strategy, landing zones, service selection, architecture patterns, design principles. Use when designing systems or making architectural decisions on AWS.",
+      "priority": 5,
+      "pathPatterns": [
+        "architecture/**",
+        "docs/architecture/**",
+        "adr/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)architecture/.*$",
+        "(?:^|/)docs/architecture/.*$",
+        "(?:^|/)adr/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+wellarchitected\\b",
+        "\\baws\\s+organizations\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+wellarchitected\\b",
+        "\\baws\\s+organizations\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-wellarchitected",
+        "@aws-sdk/client-organizations"
+      ],
+      "promptSignals": [
+        "aws architecture",
+        "well-architected",
+        "multi-account",
+        "landing zone",
+        "aws design",
+        "aws pattern",
+        "serverless vs containers",
+        "aws best practice",
+        "control tower",
+        "aws organization"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/wellarchitected/latest/framework/"
+      ]
+    },
+    "aws-security-posture": {
+      "name": "aws-security-posture",
+      "description": "AWS security posture guidance — Security Hub, GuardDuty, Config, Inspector, detective controls, compliance frameworks. Use when implementing security monitoring, compliance, or threat detection.",
+      "priority": 4,
+      "pathPatterns": [
+        "security/**",
+        "compliance/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)security/.*$",
+        "(?:^|/)compliance/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+securityhub\\b",
+        "\\baws\\s+guardduty\\b",
+        "\\baws\\s+inspector2\\b",
+        "\\baws\\s+configservice\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+securityhub\\b",
+        "\\baws\\s+guardduty\\b",
+        "\\baws\\s+inspector2\\b",
+        "\\baws\\s+configservice\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-securityhub",
+        "@aws-sdk/client-guardduty",
+        "@aws-sdk/client-inspector2",
+        "@aws-sdk/client-config-service"
+      ],
+      "promptSignals": [
+        "security hub",
+        "guardduty",
+        "aws config",
+        "inspector",
+        "security posture",
+        "compliance",
+        "threat detection",
+        "security finding",
+        "cis benchmark"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/securityhub/latest/userguide/"
+      ]
+    },
+    "bedrock": {
+      "name": "bedrock",
+      "description": "Amazon Bedrock guidance — foundation models, agents, knowledge bases, guardrails, fine-tuning, model evaluation. Use when building AI/ML features on AWS.",
+      "priority": 7,
+      "pathPatterns": [
+        "bedrock/**",
+        "ai/**",
+        "ml/**",
+        "agents/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)bedrock/.*$",
+        "(?:^|/)ai/.*$",
+        "(?:^|/)ml/.*$",
+        "(?:^|/)agents/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+bedrock\\b",
+        "\\baws\\s+bedrock-runtime\\b",
+        "\\baws\\s+bedrock-agent\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+bedrock\\b",
+        "\\baws\\s+bedrock-runtime\\b",
+        "\\baws\\s+bedrock-agent\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-bedrock",
+        "@aws-sdk/client-bedrock-runtime",
+        "@aws-sdk/client-bedrock-agent",
+        "@aws-sdk/client-bedrock-agent-runtime"
+      ],
+      "promptSignals": [
+        "bedrock",
+        "foundation model",
+        "claude on aws",
+        "bedrock agent",
+        "knowledge base",
+        "bedrock guardrail",
+        "model invocation",
+        "bedrock fine-tuning",
+        "titan",
+        "anthropic on bedrock"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/bedrock/latest/userguide/"
+      ]
+    },
+    "cdk": {
+      "name": "cdk",
+      "description": "AWS CDK guidance — infrastructure as code with TypeScript/Python, construct patterns, L1/L2/L3 constructs, stacks, deployment, testing. Use when building or configuring AWS infrastructure with CDK.",
+      "priority": 7,
+      "pathPatterns": [
+        "cdk.json",
+        "cdk.out/**",
+        "lib/*-stack.ts",
+        "lib/*-stack.js",
+        "bin/*.ts",
+        "bin/*.js",
+        "stacks/**",
+        "constructs/**",
+        "cdk.context.json"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)cdk\\.json$",
+        "(?:^|/)cdk\\.out/.*$",
+        "(?:^|/)lib/[^/]*-stack\\.ts$",
+        "(?:^|/)lib/[^/]*-stack\\.js$",
+        "(?:^|/)bin/[^/]*\\.ts$",
+        "(?:^|/)bin/[^/]*\\.js$",
+        "(?:^|/)stacks/.*$",
+        "(?:^|/)constructs/.*$",
+        "(?:^|/)cdk\\.context\\.json$"
+      ],
+      "bashPatterns": [
+        "\\bcdk\\s+(deploy|synth|diff|destroy|bootstrap|ls|list|watch)\\b",
+        "\\bnpx\\s+cdk\\b"
+      ],
+      "bashRegexSources": [
+        "\\bcdk\\s+(deploy|synth|diff|destroy|bootstrap|ls|list|watch)\\b",
+        "\\bnpx\\s+cdk\\b"
+      ],
+      "importPatterns": [
+        "aws-cdk-lib",
+        "constructs"
+      ],
+      "promptSignals": [
+        "cdk",
+        "cdk deploy",
+        "cdk synth",
+        "cdk stack",
+        "cdk construct",
+        "infrastructure as code",
+        "cloudformation stack",
+        "cdk bootstrap",
+        "l2 construct",
+        "cdk pipeline"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/cdk/v2/guide/"
+      ]
+    },
+    "cloudformation": {
+      "name": "cloudformation",
+      "description": "AWS CloudFormation guidance — infrastructure as code with YAML/JSON templates, stacks, change sets, nested stacks, stack sets, drift detection. Use when working with CloudFormation templates directly (not via CDK).",
+      "priority": 5,
+      "pathPatterns": [
+        "template.yaml",
+        "template.yml",
+        "template.json",
+        "cloudformation/**",
+        "cfn/**",
+        "**/*.template.yaml",
+        "**/*.template.yml",
+        "**/*.template.json"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)template\\.yaml$",
+        "(?:^|/)template\\.yml$",
+        "(?:^|/)template\\.json$",
+        "(?:^|/)cloudformation/.*$",
+        "(?:^|/)cfn/.*$",
+        "(?:^|/)(?:.*\\/)?[^/]*\\.template\\.yaml$",
+        "(?:^|/)(?:.*\\/)?[^/]*\\.template\\.yml$",
+        "(?:^|/)(?:.*\\/)?[^/]*\\.template\\.json$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+cloudformation\\b",
+        "\\baws\\s+cfn\\b",
+        "\\brain\\s+"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+cloudformation\\b",
+        "\\baws\\s+cfn\\b",
+        "\\brain\\s+"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-cloudformation"
+      ],
+      "promptSignals": [
+        "cloudformation",
+        "cfn template",
+        "cloudformation stack",
+        "change set",
+        "nested stack",
+        "stack set",
+        "cfn",
+        "cloudformation drift",
+        "sam template",
+        "rain"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/"
+      ]
+    },
+    "cloudfront": {
+      "name": "cloudfront",
+      "description": "Amazon CloudFront guidance — CDN, edge caching, origins, behaviors, functions, Lambda@Edge, signed URLs, cache invalidation. Use when serving content globally with low latency.",
+      "priority": 5,
+      "pathPatterns": [
+        "cdn/**",
+        "cloudfront/**",
+        "edge/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)cdn/.*$",
+        "(?:^|/)cloudfront/.*$",
+        "(?:^|/)edge/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+cloudfront\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+cloudfront\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-cloudfront",
+        "aws-cdk-lib/aws-cloudfront",
+        "aws-cdk-lib/aws-cloudfront-origins"
+      ],
+      "promptSignals": [
+        "cloudfront",
+        "cdn",
+        "edge cache",
+        "cache invalidation",
+        "signed url",
+        "lambda@edge",
+        "cloudfront function",
+        "origin",
+        "cache behavior",
+        "content delivery"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/"
+      ]
+    },
+    "cloudwatch": {
+      "name": "cloudwatch",
+      "description": "Amazon CloudWatch guidance — metrics, logs, alarms, dashboards, Logs Insights, custom metrics, anomaly detection. Use when setting up monitoring, debugging with logs, or creating alerts.",
+      "priority": 6,
+      "pathPatterns": [
+        "monitoring/**",
+        "observability/**",
+        "dashboards/**",
+        "alarms/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)monitoring/.*$",
+        "(?:^|/)observability/.*$",
+        "(?:^|/)dashboards/.*$",
+        "(?:^|/)alarms/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+cloudwatch\\b",
+        "\\baws\\s+logs\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+cloudwatch\\b",
+        "\\baws\\s+logs\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-cloudwatch",
+        "@aws-sdk/client-cloudwatch-logs"
+      ],
+      "promptSignals": [
+        "cloudwatch",
+        "cloudwatch logs",
+        "cloudwatch alarm",
+        "cloudwatch metric",
+        "logs insights",
+        "custom metric",
+        "cloudwatch dashboard",
+        "log group",
+        "metric filter",
+        "cloudwatch anomaly"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/"
+      ]
+    },
+    "codepipeline": {
+      "name": "codepipeline",
+      "description": "AWS CI/CD guidance — CodePipeline, CodeBuild, CodeDeploy, pipeline stages, buildspec, deployment strategies, GitHub Actions integration. Use when building CI/CD pipelines on AWS.",
+      "priority": 5,
+      "pathPatterns": [
+        "buildspec.yml",
+        "buildspec.yaml",
+        "buildspec*.yml",
+        "appspec.yml",
+        "appspec.yaml",
+        ".github/workflows/**",
+        "pipeline/**",
+        "cicd/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)buildspec\\.yml$",
+        "(?:^|/)buildspec\\.yaml$",
+        "(?:^|/)buildspec[^/]*\\.yml$",
+        "(?:^|/)appspec\\.yml$",
+        "(?:^|/)appspec\\.yaml$",
+        "(?:^|/)\\.github/workflows/.*$",
+        "(?:^|/)pipeline/.*$",
+        "(?:^|/)cicd/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+codepipeline\\b",
+        "\\baws\\s+codebuild\\b",
+        "\\baws\\s+codedeploy\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+codepipeline\\b",
+        "\\baws\\s+codebuild\\b",
+        "\\baws\\s+codedeploy\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-codepipeline",
+        "@aws-sdk/client-codebuild",
+        "@aws-sdk/client-codedeploy",
+        "aws-cdk-lib/aws-codepipeline",
+        "aws-cdk-lib/aws-codebuild",
+        "aws-cdk-lib/aws-codepipeline-actions"
+      ],
+      "promptSignals": [
+        "codepipeline",
+        "codebuild",
+        "codedeploy",
+        "buildspec",
+        "ci/cd pipeline",
+        "deployment pipeline",
+        "blue green deploy",
+        "github actions aws",
+        "build project",
+        "appspec"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/codepipeline/latest/userguide/",
+        "https://docs.aws.amazon.com/codebuild/latest/userguide/"
+      ]
+    },
+    "cognito": {
+      "name": "cognito",
+      "description": "Amazon Cognito guidance — user pools, identity pools, hosted UI, OAuth/OIDC, JWT tokens, MFA, custom auth flows, federation. Use when implementing authentication and authorization with AWS.",
+      "priority": 5,
+      "pathPatterns": [
+        "auth/**",
+        "cognito/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)auth/.*$",
+        "(?:^|/)cognito/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+cognito-idp\\b",
+        "\\baws\\s+cognito-identity\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+cognito-idp\\b",
+        "\\baws\\s+cognito-identity\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-cognito-identity-provider",
+        "@aws-sdk/client-cognito-identity",
+        "aws-cdk-lib/aws-cognito",
+        "amazon-cognito-identity-js"
+      ],
+      "promptSignals": [
+        "cognito",
+        "user pool",
+        "identity pool",
+        "cognito auth",
+        "hosted ui",
+        "cognito jwt",
+        "cognito mfa",
+        "cognito federation",
+        "cognito trigger",
+        "aws authentication"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/cognito/latest/developerguide/"
+      ]
+    },
+    "cost-optimization": {
+      "name": "cost-optimization",
+      "description": "AWS cost optimization guidance — pricing models, Reserved Instances, Savings Plans, right-sizing, cost allocation, budgets, cost anomaly detection. Use when optimizing AWS spending or planning costs.",
+      "priority": 6,
+      "pathPatterns": [
+        "cost/**",
+        "billing/**",
+        "budgets/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)cost/.*$",
+        "(?:^|/)billing/.*$",
+        "(?:^|/)budgets/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+ce\\b",
+        "\\baws\\s+budgets\\b",
+        "\\baws\\s+pricing\\b",
+        "\\baws\\s+cost-optimization-hub\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+ce\\b",
+        "\\baws\\s+budgets\\b",
+        "\\baws\\s+pricing\\b",
+        "\\baws\\s+cost-optimization-hub\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-cost-explorer",
+        "@aws-sdk/client-budgets"
+      ],
+      "promptSignals": [
+        "aws cost",
+        "aws bill",
+        "aws pricing",
+        "reserved instance",
+        "savings plan",
+        "cost optimization",
+        "right-sizing",
+        "cost allocation",
+        "aws budget",
+        "cost anomaly",
+        "aws spending",
+        "cost explorer"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/cost-management/latest/userguide/"
+      ]
+    },
+    "dynamodb": {
+      "name": "dynamodb",
+      "description": "Amazon DynamoDB guidance — NoSQL key-value and document database, single-table design, GSI patterns, capacity modes, streams. Use when designing, querying, or optimizing DynamoDB tables.",
+      "priority": 8,
+      "pathPatterns": [
+        "dynamodb/**",
+        "tables/**",
+        "**/dynamodb*.ts",
+        "**/dynamodb*.js",
+        "**/table*.ts",
+        "**/table*.js"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)dynamodb/.*$",
+        "(?:^|/)tables/.*$",
+        "(?:^|/)(?:.*\\/)?dynamodb[^/]*\\.ts$",
+        "(?:^|/)(?:.*\\/)?dynamodb[^/]*\\.js$",
+        "(?:^|/)(?:.*\\/)?table[^/]*\\.ts$",
+        "(?:^|/)(?:.*\\/)?table[^/]*\\.js$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+dynamodb\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+dynamodb\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-dynamodb",
+        "@aws-sdk/lib-dynamodb",
+        "dynamoose",
+        "electrodb"
+      ],
+      "promptSignals": [
+        "dynamodb",
+        "dynamo db",
+        "partition key",
+        "sort key",
+        "single table design",
+        "global secondary index",
+        "gsi",
+        "nosql",
+        "dynamodb streams",
+        "on-demand capacity",
+        "provisioned capacity",
+        "hot partition"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/",
+        "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html"
+      ]
+    },
+    "ebs-efs": {
+      "name": "ebs-efs",
+      "description": "Amazon EBS and EFS guidance — block storage volumes, file systems, performance tiers, snapshots, encryption. Use when configuring storage for EC2, ECS, or Lambda.",
+      "priority": 4,
+      "pathPatterns": [
+        "storage/**",
+        "volumes/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)storage/.*$",
+        "(?:^|/)volumes/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+ec2\\s+(create|describe|delete|attach|detach)-volume\\b",
+        "\\baws\\s+efs\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+ec2\\s+(create|describe|delete|attach|detach)-volume\\b",
+        "\\baws\\s+efs\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-ebs",
+        "@aws-sdk/client-efs",
+        "aws-cdk-lib/aws-efs"
+      ],
+      "promptSignals": [
+        "ebs",
+        "efs",
+        "block storage",
+        "file system",
+        "ebs volume",
+        "elastic file system",
+        "ebs snapshot",
+        "gp3"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/ebs/",
+        "https://docs.aws.amazon.com/efs/"
+      ]
+    },
+    "ec2": {
+      "name": "ec2",
+      "description": "Amazon EC2 guidance — instance types, AMIs, pricing models, user data, placement groups, instance store vs EBS. Use when working with virtual machines on AWS.",
+      "priority": 4,
+      "pathPatterns": [
+        "ec2/**",
+        "userdata/**",
+        "instances/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)ec2/.*$",
+        "(?:^|/)userdata/.*$",
+        "(?:^|/)instances/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+ec2\\b",
+        "\\baws\\s+ssm\\s+start-session\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+ec2\\b",
+        "\\baws\\s+ssm\\s+start-session\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-ec2",
+        "aws-cdk-lib/aws-ec2"
+      ],
+      "promptSignals": [
+        "ec2",
+        "ec2 instance",
+        "instance type",
+        "ami",
+        "spot instance",
+        "auto scaling group",
+        "launch template",
+        "user data"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/"
+      ]
+    },
+    "ecs-fargate": {
+      "name": "ecs-fargate",
+      "description": "Amazon ECS with Fargate guidance — container orchestration, task definitions, services, load balancing, auto-scaling, service mesh. Use when running containers on AWS without managing servers.",
+      "priority": 6,
+      "pathPatterns": [
+        "Dockerfile",
+        "docker-compose*.yml",
+        "docker-compose*.yaml",
+        "ecs/**",
+        "containers/**",
+        "task-definitions/**",
+        ".aws/task-definition.json"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)Dockerfile$",
+        "(?:^|/)docker-compose[^/]*\\.yml$",
+        "(?:^|/)docker-compose[^/]*\\.yaml$",
+        "(?:^|/)ecs/.*$",
+        "(?:^|/)containers/.*$",
+        "(?:^|/)task-definitions/.*$",
+        "(?:^|/)\\.aws/task-definition\\.json$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+ecs\\b",
+        "\\bdocker\\s+(build|push|pull|run)\\b",
+        "\\bcopilot\\s+"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+ecs\\b",
+        "\\bdocker\\s+(build|push|pull|run)\\b",
+        "\\bcopilot\\s+"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-ecs",
+        "aws-cdk-lib/aws-ecs",
+        "aws-cdk-lib/aws-ecs-patterns"
+      ],
+      "promptSignals": [
+        "ecs",
+        "fargate",
+        "container",
+        "task definition",
+        "ecs service",
+        "docker deploy",
+        "container orchestration",
+        "ecs cluster",
+        "fargate task",
+        "copilot"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/"
+      ]
+    },
+    "elasticache": {
+      "name": "elasticache",
+      "description": "Amazon ElastiCache guidance — Redis and Memcached, caching strategies, cluster modes, serverless, session storage. Use when adding caching or in-memory data stores to AWS applications.",
+      "priority": 4,
+      "pathPatterns": [
+        "cache/**",
+        "redis/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)cache/.*$",
+        "(?:^|/)redis/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+elasticache\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+elasticache\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-elasticache",
+        "aws-cdk-lib/aws-elasticache",
+        "ioredis",
+        "redis"
+      ],
+      "promptSignals": [
+        "elasticache",
+        "redis",
+        "memcached",
+        "caching layer",
+        "session store",
+        "redis cluster"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/"
+      ]
+    },
+    "eventbridge": {
+      "name": "eventbridge",
+      "description": "Amazon EventBridge guidance — event bus, rules, event patterns, scheduler, pipes, schema registry, archive/replay. Use when building event-driven architectures or scheduling tasks.",
+      "priority": 6,
+      "pathPatterns": [
+        "events/**",
+        "eventbridge/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)events/.*$",
+        "(?:^|/)eventbridge/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+events\\b",
+        "\\baws\\s+scheduler\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+events\\b",
+        "\\baws\\s+scheduler\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-eventbridge",
+        "@aws-sdk/client-scheduler",
+        "aws-cdk-lib/aws-events",
+        "aws-cdk-lib/aws-events-targets"
+      ],
+      "promptSignals": [
+        "eventbridge",
+        "event bus",
+        "event pattern",
+        "event rule",
+        "eventbridge scheduler",
+        "event-driven",
+        "cron schedule",
+        "event pipe",
+        "schema registry"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/eventbridge/latest/userguide/"
+      ]
+    },
+    "iam": {
+      "name": "iam",
+      "description": "AWS IAM guidance — identity, policies, roles, cross-account access, least privilege, permission boundaries. Use when configuring access control, debugging permission errors, or designing security.",
+      "priority": 8,
+      "pathPatterns": [
+        "iam/**",
+        "policies/**",
+        "*-policy.json",
+        "*-role.json",
+        "trust-policy.json"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)iam/.*$",
+        "(?:^|/)policies/.*$",
+        "(?:^|/)[^/]*-policy\\.json$",
+        "(?:^|/)[^/]*-role\\.json$",
+        "(?:^|/)trust-policy\\.json$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+iam\\b",
+        "\\baws\\s+sts\\b",
+        "\\baws\\s+sso\\b",
+        "\\baws\\s+organizations\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+iam\\b",
+        "\\baws\\s+sts\\b",
+        "\\baws\\s+sso\\b",
+        "\\baws\\s+organizations\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-iam",
+        "@aws-sdk/client-sts"
+      ],
+      "promptSignals": [
+        "iam policy",
+        "iam role",
+        "permission denied",
+        "access denied",
+        "cross account",
+        "assume role",
+        "least privilege",
+        "permission boundary",
+        "service control policy",
+        "aws permissions",
+        "iam user",
+        "security group"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/IAM/latest/UserGuide/",
+        "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html"
+      ]
+    },
+    "lambda": {
+      "name": "lambda",
+      "description": "AWS Lambda guidance — serverless compute, event-driven functions, runtimes, cold starts, layers, concurrency. Use when building, debugging, or optimizing Lambda functions.",
+      "priority": 8,
+      "pathPatterns": [
+        "serverless.yml",
+        "serverless.yaml",
+        "serverless.ts",
+        "template.yaml",
+        "template.yml",
+        "samconfig.toml",
+        "samconfig.yaml",
+        "lambda/**",
+        "functions/**",
+        "src/functions/**",
+        "src/lambda/**",
+        "src/handlers/**",
+        "handlers/**",
+        "cdk.json",
+        "lib/*-stack.ts",
+        "lib/*-stack.js",
+        "stacks/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)serverless\\.yml$",
+        "(?:^|/)serverless\\.yaml$",
+        "(?:^|/)serverless\\.ts$",
+        "(?:^|/)template\\.yaml$",
+        "(?:^|/)template\\.yml$",
+        "(?:^|/)samconfig\\.toml$",
+        "(?:^|/)samconfig\\.yaml$",
+        "(?:^|/)lambda/.*$",
+        "(?:^|/)functions/.*$",
+        "(?:^|/)src/functions/.*$",
+        "(?:^|/)src/lambda/.*$",
+        "(?:^|/)src/handlers/.*$",
+        "(?:^|/)handlers/.*$",
+        "(?:^|/)cdk\\.json$",
+        "(?:^|/)lib/[^/]*-stack\\.ts$",
+        "(?:^|/)lib/[^/]*-stack\\.js$",
+        "(?:^|/)stacks/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+lambda\\b",
+        "\\bsam\\s+(build|deploy|local|invoke|start-api)\\b",
+        "\\bcdk\\s+(deploy|synth|diff|destroy)\\b",
+        "\\bsls\\s+(deploy|invoke|offline)\\b",
+        "\\bserverless\\s+(deploy|invoke|offline)\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+lambda\\b",
+        "\\bsam\\s+(build|deploy|local|invoke|start-api)\\b",
+        "\\bcdk\\s+(deploy|synth|diff|destroy)\\b",
+        "\\bsls\\s+(deploy|invoke|offline)\\b",
+        "\\bserverless\\s+(deploy|invoke|offline)\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-lambda",
+        "@middy/core"
+      ],
+      "promptSignals": [
+        "lambda function",
+        "cold start",
+        "serverless function",
+        "aws lambda",
+        "lambda handler",
+        "lambda layer",
+        "provisioned concurrency",
+        "lambda timeout",
+        "lambda memory"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/lambda/latest/dg/",
+        "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html"
+      ]
+    },
+    "rds-aurora": {
+      "name": "rds-aurora",
+      "description": "Amazon RDS and Aurora guidance — managed relational databases, PostgreSQL, MySQL, connection pooling, read replicas, Multi-AZ, backups, Performance Insights. Use when working with relational databases on AWS.",
+      "priority": 6,
+      "pathPatterns": [
+        "database/**",
+        "db/**",
+        "migrations/**",
+        "prisma/**",
+        "drizzle/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)database/.*$",
+        "(?:^|/)db/.*$",
+        "(?:^|/)migrations/.*$",
+        "(?:^|/)prisma/.*$",
+        "(?:^|/)drizzle/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+rds\\b",
+        "\\bpsql\\b",
+        "\\bmysql\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+rds\\b",
+        "\\bpsql\\b",
+        "\\bmysql\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-rds",
+        "@aws-sdk/client-rds-data",
+        "aws-cdk-lib/aws-rds"
+      ],
+      "promptSignals": [
+        "rds",
+        "aurora",
+        "postgresql",
+        "mysql",
+        "database instance",
+        "read replica",
+        "multi-az",
+        "rds proxy",
+        "aurora serverless",
+        "connection pooling"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/",
+        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/"
+      ]
+    },
+    "route53": {
+      "name": "route53",
+      "description": "Amazon Route 53 guidance — DNS management, hosted zones, routing policies, health checks, domain registration, DNS failover. Use when configuring DNS, domains, or traffic routing.",
+      "priority": 5,
+      "pathPatterns": [
+        "dns/**",
+        "domains/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)dns/.*$",
+        "(?:^|/)domains/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+route53\\b",
+        "\\baws\\s+route53domains\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+route53\\b",
+        "\\baws\\s+route53domains\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-route-53",
+        "@aws-sdk/client-route-53-domains",
+        "aws-cdk-lib/aws-route53",
+        "aws-cdk-lib/aws-route53-targets"
+      ],
+      "promptSignals": [
+        "route 53",
+        "route53",
+        "dns",
+        "hosted zone",
+        "domain name",
+        "dns record",
+        "alias record",
+        "health check",
+        "dns failover",
+        "nameserver"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/"
+      ]
+    },
+    "s3": {
+      "name": "s3",
+      "description": "Amazon S3 guidance — object storage, storage classes, access patterns, presigned URLs, event notifications, lifecycle policies. Use when working with S3 buckets, objects, or file uploads.",
+      "priority": 8,
+      "pathPatterns": [
+        "s3/**",
+        "storage/**",
+        "uploads/**",
+        "buckets/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)s3/.*$",
+        "(?:^|/)storage/.*$",
+        "(?:^|/)uploads/.*$",
+        "(?:^|/)buckets/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+s3\\b",
+        "\\baws\\s+s3api\\b",
+        "\\baws\\s+s3control\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+s3\\b",
+        "\\baws\\s+s3api\\b",
+        "\\baws\\s+s3control\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-s3",
+        "@aws-sdk/s3-request-presigner",
+        "@aws-sdk/lib-storage"
+      ],
+      "promptSignals": [
+        "s3 bucket",
+        "s3 upload",
+        "presigned url",
+        "object storage",
+        "storage class",
+        "s3 lifecycle",
+        "s3 event",
+        "s3 transfer",
+        "glacier",
+        "intelligent tiering"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/",
+        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html"
+      ]
+    },
+    "sagemaker": {
+      "name": "sagemaker",
+      "description": "Amazon SageMaker guidance — ML model training, deployment, endpoints, notebooks, pipelines, feature store. Use when building or deploying machine learning models on AWS.",
+      "priority": 4,
+      "pathPatterns": [
+        "sagemaker/**",
+        "ml/**",
+        "models/**",
+        "notebooks/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)sagemaker/.*$",
+        "(?:^|/)ml/.*$",
+        "(?:^|/)models/.*$",
+        "(?:^|/)notebooks/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+sagemaker\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+sagemaker\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-sagemaker",
+        "@aws-sdk/client-sagemaker-runtime",
+        "aws-cdk-lib/aws-sagemaker"
+      ],
+      "promptSignals": [
+        "sagemaker",
+        "ml model",
+        "model training",
+        "model endpoint",
+        "sagemaker notebook",
+        "sagemaker pipeline",
+        "inference endpoint",
+        "model deployment"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/sagemaker/latest/dg/"
+      ]
+    },
+    "secrets-kms": {
+      "name": "secrets-kms",
+      "description": "AWS Secrets Manager and KMS guidance — secret rotation, encryption keys, envelope encryption, key policies, secret versioning. Use when managing secrets, API keys, database credentials, or encryption.",
+      "priority": 5,
+      "pathPatterns": [
+        "secrets/**",
+        "encryption/**",
+        "kms/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)secrets/.*$",
+        "(?:^|/)encryption/.*$",
+        "(?:^|/)kms/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+secretsmanager\\b",
+        "\\baws\\s+kms\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+secretsmanager\\b",
+        "\\baws\\s+kms\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-secrets-manager",
+        "@aws-sdk/client-kms",
+        "aws-cdk-lib/aws-secretsmanager",
+        "aws-cdk-lib/aws-kms"
+      ],
+      "promptSignals": [
+        "secrets manager",
+        "kms",
+        "encryption key",
+        "secret rotation",
+        "api key storage",
+        "database credentials",
+        "envelope encryption",
+        "cmk",
+        "customer managed key",
+        "aws secret"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/",
+        "https://docs.aws.amazon.com/kms/latest/developerguide/"
+      ]
+    },
+    "sqs-sns": {
+      "name": "sqs-sns",
+      "description": "Amazon SQS and SNS guidance — message queues, pub/sub, FIFO ordering, dead-letter queues, fan-out patterns, event-driven architecture. Use when building async messaging or event-driven systems.",
+      "priority": 6,
+      "pathPatterns": [
+        "queues/**",
+        "messaging/**",
+        "events/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)queues/.*$",
+        "(?:^|/)messaging/.*$",
+        "(?:^|/)events/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+sqs\\b",
+        "\\baws\\s+sns\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+sqs\\b",
+        "\\baws\\s+sns\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-sqs",
+        "@aws-sdk/client-sns"
+      ],
+      "promptSignals": [
+        "sqs",
+        "sns",
+        "message queue",
+        "dead letter queue",
+        "fifo queue",
+        "pub sub",
+        "fan-out",
+        "sns topic",
+        "sqs queue",
+        "event-driven"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/sqs/",
+        "https://docs.aws.amazon.com/sns/"
+      ]
+    },
+    "step-functions": {
+      "name": "step-functions",
+      "description": "AWS Step Functions guidance — workflow orchestration, state machines, Express vs Standard, parallel execution, error handling, service integrations. Use when building multi-step workflows or orchestrating AWS services.",
+      "priority": 6,
+      "pathPatterns": [
+        "stepfunctions/**",
+        "workflows/**",
+        "state-machines/**",
+        "asl/**",
+        "**/*.asl.json"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)stepfunctions/.*$",
+        "(?:^|/)workflows/.*$",
+        "(?:^|/)state-machines/.*$",
+        "(?:^|/)asl/.*$",
+        "(?:^|/)(?:.*\\/)?[^/]*\\.asl\\.json$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+stepfunctions\\b",
+        "\\baws\\s+sfn\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+stepfunctions\\b",
+        "\\baws\\s+sfn\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-sfn",
+        "aws-cdk-lib/aws-stepfunctions",
+        "aws-cdk-lib/aws-stepfunctions-tasks"
+      ],
+      "promptSignals": [
+        "step functions",
+        "state machine",
+        "workflow orchestration",
+        "step function",
+        "asl",
+        "parallel execution",
+        "workflow",
+        "saga pattern",
+        "orchestration"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/step-functions/latest/dg/"
+      ]
+    },
+    "vpc": {
+      "name": "vpc",
+      "description": "Amazon VPC guidance — networking, subnets, security groups, NAT gateway costs, VPC endpoints, peering. Use when configuring networking, debugging connectivity, or optimizing network costs.",
+      "priority": 7,
+      "pathPatterns": [
+        "vpc/**",
+        "network/**",
+        "networking/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)vpc/.*$",
+        "(?:^|/)network/.*$",
+        "(?:^|/)networking/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+ec2\\s+(describe-vpcs|create-vpc|describe-subnets|describe-security-groups|describe-nat-gateways)\\b",
+        "\\baws\\s+ec2\\s+describe-vpc-endpoints\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+ec2\\s+(describe-vpcs|create-vpc|describe-subnets|describe-security-groups|describe-nat-gateways)\\b",
+        "\\baws\\s+ec2\\s+describe-vpc-endpoints\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-ec2"
+      ],
+      "promptSignals": [
+        "vpc",
+        "subnet",
+        "security group",
+        "nat gateway",
+        "vpc endpoint",
+        "vpc peering",
+        "private subnet",
+        "public subnet",
+        "network acl",
+        "transit gateway",
+        "cidr block"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/vpc/latest/userguide/"
+      ]
+    },
+    "waf-shield": {
+      "name": "waf-shield",
+      "description": "AWS WAF and Shield guidance — web application firewall, DDoS protection, rate limiting, bot control, managed rules. Use when protecting web applications from attacks.",
+      "priority": 4,
+      "pathPatterns": [
+        "waf/**",
+        "security/**",
+        "firewall/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)waf/.*$",
+        "(?:^|/)security/.*$",
+        "(?:^|/)firewall/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+wafv2\\b",
+        "\\baws\\s+shield\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+wafv2\\b",
+        "\\baws\\s+shield\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-wafv2",
+        "@aws-sdk/client-shield",
+        "aws-cdk-lib/aws-wafv2"
+      ],
+      "promptSignals": [
+        "waf",
+        "web application firewall",
+        "ddos",
+        "shield",
+        "rate limiting",
+        "bot protection",
+        "ip blocking",
+        "managed rules"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/waf/latest/developerguide/"
+      ]
+    },
+    "xray-cloudtrail": {
+      "name": "xray-cloudtrail",
+      "description": "AWS X-Ray and CloudTrail guidance — distributed tracing, service maps, audit logging, event history, compliance. Use when debugging distributed systems or auditing AWS API activity.",
+      "priority": 4,
+      "pathPatterns": [
+        "tracing/**",
+        "audit/**"
+      ],
+      "pathRegexSources": [
+        "(?:^|/)tracing/.*$",
+        "(?:^|/)audit/.*$"
+      ],
+      "bashPatterns": [
+        "\\baws\\s+xray\\b",
+        "\\baws\\s+cloudtrail\\b"
+      ],
+      "bashRegexSources": [
+        "\\baws\\s+xray\\b",
+        "\\baws\\s+cloudtrail\\b"
+      ],
+      "importPatterns": [
+        "@aws-sdk/client-xray",
+        "@aws-sdk/client-cloudtrail",
+        "aws-xray-sdk"
+      ],
+      "promptSignals": [
+        "x-ray",
+        "xray",
+        "cloudtrail",
+        "distributed tracing",
+        "service map",
+        "audit log",
+        "api activity",
+        "trace"
+      ],
+      "docs": [
+        "https://docs.aws.amazon.com/xray/latest/devguide/",
+        "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/"
+      ]
+    }
+  }
+}

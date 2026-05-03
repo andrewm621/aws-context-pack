@@ -1,0 +1,27 @@
+{
+  "name": "aws-context-pack",
+  "version": "0.1.0",
+  "description": "Comprehensive AWS context pack — service knowledge graph, skills for every major service, decision matrices, and architecture patterns. Turns any AI agent into an AWS expert.",
+  "author": {
+    "name": "Andrew Miller",
+    "url": "https://github.com/andrewtmiller"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "aws",
+    "lambda",
+    "s3",
+    "dynamodb",
+    "iam",
+    "cdk",
+    "cloudformation",
+    "bedrock",
+    "serverless",
+    "ec2",
+    "ecs",
+    "fargate",
+    "api-gateway",
+    "vpc",
+    "cloudwatch"
+  ]
+}

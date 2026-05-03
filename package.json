@@ -1,0 +1,31 @@
+{
+  "name": "aws-context-pack",
+  "version": "0.1.0",
+  "description": "Claude Code plugin providing AI-consumable AWS service knowledge",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewtmiller/aws-context-pack"
+  },
+  "scripts": {
+    "build": "node scripts/build-manifest.mjs",
+    "validate": "node scripts/validate.mjs",
+    "catalog": "node scripts/generate-catalog.mjs",
+    "prepublish": "npm run build && npm run validate"
+  },
+  "files": [
+    "aws.md",
+    "hooks/",
+    "skills/",
+    "scripts/",
+    "generated/",
+    ".claude-plugin/",
+    "install.sh",
+    "README.md",
+    "CLAUDE.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
