@@ -1,36 +1,40 @@
 ---
+strata_id: 0c4e4456-a7be-4ac9-9531-a2dbccea0ad4
+type: note
+created: 2026-04-30T21:02:24+00:00
+modified: 2026-04-30T21:02:24.597544565+00:00
 name: cost-optimization
-description: AWS cost optimization guidance — pricing models, Reserved Instances, Savings Plans, right-sizing, cost allocation, budgets, cost anomaly detection. Use when optimizing AWS spending or planning costs.
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/cost-management/latest/userguide/"
-  pathPatterns:
-    - 'cost/**'
-    - 'billing/**'
-    - 'budgets/**'
   bashPatterns:
-    - '\baws\s+ce\b'
-    - '\baws\s+budgets\b'
-    - '\baws\s+pricing\b'
-    - '\baws\s+cost-optimization-hub\b'
+  - \baws\s+ce\b
+  - \baws\s+budgets\b
+  - \baws\s+pricing\b
+  - \baws\s+cost-optimization-hub\b
+  docs:
+  - https://docs.aws.amazon.com/cost-management/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-cost-explorer"
-    - "@aws-sdk/client-budgets"
+  - '@aws-sdk/client-cost-explorer'
+  - '@aws-sdk/client-budgets'
+  pathPatterns:
+  - cost/**
+  - billing/**
+  - budgets/**
+  priority: 6
   promptSignals:
     phrases:
-      - "aws cost"
-      - "aws bill"
-      - "aws pricing"
-      - "reserved instance"
-      - "savings plan"
-      - "cost optimization"
-      - "right-sizing"
-      - "cost allocation"
-      - "aws budget"
-      - "cost anomaly"
-      - "aws spending"
-      - "cost explorer"
+    - aws cost
+    - aws bill
+    - aws pricing
+    - reserved instance
+    - savings plan
+    - cost optimization
+    - right-sizing
+    - cost allocation
+    - aws budget
+    - cost anomaly
+    - aws spending
+    - cost explorer
+description: AWS cost optimization guidance — pricing models, Reserved Instances, Savings Plans, right-sizing, cost allocation, budgets, cost anomaly detection. Use when optimizing AWS spending or planning costs.
 ---
 
 ## What It Is & When to Use It

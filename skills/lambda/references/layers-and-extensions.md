@@ -1,3 +1,10 @@
+---
+strata_id: fde1b642-6c72-4cd9-b5d5-19c0816aec69
+type: note
+created: 2026-05-01T18:37:08+00:00
+modified: 2026-05-01T18:37:08.418220660+00:00
+---
+
 # Lambda Layers and Extensions
 
 ## What Layers Are

@@ -1,3 +1,10 @@
+---
+strata_id: efca8867-97cc-432f-976c-ed4c5830472d
+type: note
+created: 2026-05-01T18:36:49+00:00
+modified: 2026-05-01T18:36:49.139062520+00:00
+---
+
 # CDK Construct Patterns
 
 ## Construct Taxonomy: L1, L2, L3

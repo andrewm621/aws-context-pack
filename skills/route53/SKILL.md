@@ -1,33 +1,37 @@
 ---
-name: route53
+strata_id: e0ffd16d-6056-48db-a6f8-adb81599c4b3
+type: note
+created: 2026-05-01T14:41:19+00:00
+modified: 2026-05-01T14:41:19.258749152+00:00
 description: Amazon Route 53 guidance — DNS management, hosted zones, routing policies, health checks, domain registration, DNS failover. Use when configuring DNS, domains, or traffic routing.
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/"
-  pathPatterns:
-    - 'dns/**'
-    - 'domains/**'
   bashPatterns:
-    - '\baws\s+route53\b'
-    - '\baws\s+route53domains\b'
+  - \baws\s+route53\b
+  - \baws\s+route53domains\b
+  docs:
+  - https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/
   importPatterns:
-    - "@aws-sdk/client-route-53"
-    - "@aws-sdk/client-route-53-domains"
-    - "aws-cdk-lib/aws-route53"
-    - "aws-cdk-lib/aws-route53-targets"
+  - '@aws-sdk/client-route-53'
+  - '@aws-sdk/client-route-53-domains'
+  - aws-cdk-lib/aws-route53
+  - aws-cdk-lib/aws-route53-targets
+  pathPatterns:
+  - dns/**
+  - domains/**
+  priority: 5
   promptSignals:
     phrases:
-      - "route 53"
-      - "route53"
-      - "dns"
-      - "hosted zone"
-      - "domain name"
-      - "dns record"
-      - "alias record"
-      - "health check"
-      - "dns failover"
-      - "nameserver"
+    - route 53
+    - route53
+    - dns
+    - hosted zone
+    - domain name
+    - dns record
+    - alias record
+    - health check
+    - dns failover
+    - nameserver
+name: route53
 ---
 
 ## What It Is & When to Use It

@@ -1,30 +1,34 @@
 ---
-name: ec2
+strata_id: d3eb3e17-f3f2-4a5e-ba6f-cb860dbbef6f
+type: note
+created: 2026-05-02T16:07:26+00:00
+modified: 2026-05-02T16:07:26.965481354+00:00
 description: Amazon EC2 guidance — instance types, AMIs, pricing models, user data, placement groups, instance store vs EBS. Use when working with virtual machines on AWS.
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/"
-  pathPatterns:
-    - 'ec2/**'
-    - 'userdata/**'
-    - 'instances/**'
   bashPatterns:
-    - '\baws\s+ec2\b'
-    - '\baws\s+ssm\s+start-session\b'
+  - \baws\s+ec2\b
+  - \baws\s+ssm\s+start-session\b
+  docs:
+  - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/
   importPatterns:
-    - "@aws-sdk/client-ec2"
-    - "aws-cdk-lib/aws-ec2"
+  - '@aws-sdk/client-ec2'
+  - aws-cdk-lib/aws-ec2
+  pathPatterns:
+  - ec2/**
+  - userdata/**
+  - instances/**
+  priority: 4
   promptSignals:
     phrases:
-      - "ec2"
-      - "ec2 instance"
-      - "instance type"
-      - "ami"
-      - "spot instance"
-      - "auto scaling group"
-      - "launch template"
-      - "user data"
+    - ec2
+    - ec2 instance
+    - instance type
+    - ami
+    - spot instance
+    - auto scaling group
+    - launch template
+    - user data
+name: ec2
 ---
 
 # Amazon EC2

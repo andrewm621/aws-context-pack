@@ -1,3 +1,10 @@
+---
+strata_id: d4213f78-fdc7-424d-b656-51a15a0027fa
+type: note
+created: 2026-05-01T18:35:57+00:00
+modified: 2026-05-01T18:35:57.570987639+00:00
+---
+
 # DynamoDB Single-Table Design
 
 ## What It Is and Why

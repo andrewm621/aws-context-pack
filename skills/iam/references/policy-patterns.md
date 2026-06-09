@@ -1,3 +1,10 @@
+---
+strata_id: a73cf038-8cd7-4948-aee7-8637e48468d4
+type: note
+created: 2026-05-01T18:36:21+00:00
+modified: 2026-05-01T18:36:21.623469913+00:00
+---
+
 # IAM Policy Patterns Reference
 
 ## Policy Structure

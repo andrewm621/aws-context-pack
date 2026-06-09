@@ -1,3 +1,10 @@
+---
+strata_id: 5b57f8b7-e137-41da-9070-f61540a926d8
+type: note
+created: 2026-05-03T18:46:59+00:00
+modified: 2026-05-03T18:46:59.301795648+00:00
+---
+
 # AWS Context Pack — Claude Code Plugin
 
 > A Kit-tier Drop Pack from Builder's Loft

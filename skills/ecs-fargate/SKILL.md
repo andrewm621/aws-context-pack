@@ -1,38 +1,42 @@
 ---
-name: ecs-fargate
+strata_id: 66d1beaf-5603-47e1-ab3b-5437a9dddad7
+type: note
+created: 2026-05-01T14:33:47+00:00
+modified: 2026-05-01T14:33:47.417337178+00:00
 description: Amazon ECS with Fargate guidance — container orchestration, task definitions, services, load balancing, auto-scaling, service mesh. Use when running containers on AWS without managing servers.
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/"
-  pathPatterns:
-    - 'Dockerfile'
-    - 'docker-compose*.yml'
-    - 'docker-compose*.yaml'
-    - 'ecs/**'
-    - 'containers/**'
-    - 'task-definitions/**'
-    - '.aws/task-definition.json'
   bashPatterns:
-    - '\baws\s+ecs\b'
-    - '\bdocker\s+(build|push|pull|run)\b'
-    - '\bcopilot\s+'
+  - \baws\s+ecs\b
+  - \bdocker\s+(build|push|pull|run)\b
+  - \bcopilot\s+
+  docs:
+  - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/
   importPatterns:
-    - "@aws-sdk/client-ecs"
-    - "aws-cdk-lib/aws-ecs"
-    - "aws-cdk-lib/aws-ecs-patterns"
+  - '@aws-sdk/client-ecs'
+  - aws-cdk-lib/aws-ecs
+  - aws-cdk-lib/aws-ecs-patterns
+  pathPatterns:
+  - Dockerfile
+  - docker-compose*.yml
+  - docker-compose*.yaml
+  - ecs/**
+  - containers/**
+  - task-definitions/**
+  - .aws/task-definition.json
+  priority: 6
   promptSignals:
     phrases:
-      - "ecs"
-      - "fargate"
-      - "container"
-      - "task definition"
-      - "ecs service"
-      - "docker deploy"
-      - "container orchestration"
-      - "ecs cluster"
-      - "fargate task"
-      - "copilot"
+    - ecs
+    - fargate
+    - container
+    - task definition
+    - ecs service
+    - docker deploy
+    - container orchestration
+    - ecs cluster
+    - fargate task
+    - copilot
+name: ecs-fargate
 ---
 
 # Amazon ECS with Fargate

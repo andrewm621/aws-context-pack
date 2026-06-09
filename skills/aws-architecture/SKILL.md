@@ -1,32 +1,36 @@
 ---
+strata_id: 7fcfafbc-82ba-4cf7-bcf4-e07f0bce5b90
+type: note
+created: 2026-04-30T21:05:29+00:00
+modified: 2026-04-30T21:05:29.347080585+00:00
 name: aws-architecture
-description: AWS architecture guidance — Well-Architected Framework, multi-account strategy, landing zones, service selection, architecture patterns, design principles. Use when designing systems or making architectural decisions on AWS.
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/wellarchitected/latest/framework/"
-  pathPatterns:
-    - 'architecture/**'
-    - 'docs/architecture/**'
-    - 'adr/**'
   bashPatterns:
-    - '\baws\s+wellarchitected\b'
-    - '\baws\s+organizations\b'
+  - \baws\s+wellarchitected\b
+  - \baws\s+organizations\b
+  docs:
+  - https://docs.aws.amazon.com/wellarchitected/latest/framework/
   importPatterns:
-    - "@aws-sdk/client-wellarchitected"
-    - "@aws-sdk/client-organizations"
+  - '@aws-sdk/client-wellarchitected'
+  - '@aws-sdk/client-organizations'
+  pathPatterns:
+  - architecture/**
+  - docs/architecture/**
+  - adr/**
+  priority: 5
   promptSignals:
     phrases:
-      - "aws architecture"
-      - "well-architected"
-      - "multi-account"
-      - "landing zone"
-      - "aws design"
-      - "aws pattern"
-      - "serverless vs containers"
-      - "aws best practice"
-      - "control tower"
-      - "aws organization"
+    - aws architecture
+    - well-architected
+    - multi-account
+    - landing zone
+    - aws design
+    - aws pattern
+    - serverless vs containers
+    - aws best practice
+    - control tower
+    - aws organization
+description: AWS architecture guidance — Well-Architected Framework, multi-account strategy, landing zones, service selection, architecture patterns, design principles. Use when designing systems or making architectural decisions on AWS.
 ---
 
 ## What It Is & When to Use It

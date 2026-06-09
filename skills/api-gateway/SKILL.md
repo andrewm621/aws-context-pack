@@ -1,36 +1,40 @@
 ---
-name: api-gateway
+strata_id: c29e8448-4a8c-4308-8ebb-fcb25c0df026
+type: note
+created: 2026-04-30T20:42:23+00:00
+modified: 2026-04-30T20:42:23.474075325+00:00
 description: Amazon API Gateway guidance — REST API, HTTP API, WebSocket API, authorization, throttling, custom domains. Use when building or configuring API endpoints on AWS.
+name: api-gateway
 metadata:
-  priority: 7
-  docs:
-    - "https://docs.aws.amazon.com/apigateway/latest/developerguide/"
-  pathPatterns:
-    - 'api/**'
-    - 'apis/**'
-    - '*-api.ts'
-    - '*-api.js'
-    - 'openapi.yaml'
-    - 'openapi.yml'
-    - 'openapi.json'
-    - 'swagger.yaml'
-    - 'swagger.json'
   bashPatterns:
-    - '\baws\s+apigateway\b'
-    - '\baws\s+apigatewayv2\b'
+  - \baws\s+apigateway\b
+  - \baws\s+apigatewayv2\b
+  docs:
+  - https://docs.aws.amazon.com/apigateway/latest/developerguide/
   importPatterns:
-    - "@aws-sdk/client-api-gateway"
-    - "@aws-sdk/client-apigatewayv2"
+  - '@aws-sdk/client-api-gateway'
+  - '@aws-sdk/client-apigatewayv2'
+  pathPatterns:
+  - api/**
+  - apis/**
+  - '*-api.ts'
+  - '*-api.js'
+  - openapi.yaml
+  - openapi.yml
+  - openapi.json
+  - swagger.yaml
+  - swagger.json
+  priority: 7
   promptSignals:
     phrases:
-      - "api gateway"
-      - "rest api"
-      - "http api"
-      - "websocket api"
-      - "api endpoint"
-      - "api throttling"
-      - "api authorizer"
-      - "custom domain"
+    - api gateway
+    - rest api
+    - http api
+    - websocket api
+    - api endpoint
+    - api throttling
+    - api authorizer
+    - custom domain
 ---
 
 # Amazon API Gateway

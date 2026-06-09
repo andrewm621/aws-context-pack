@@ -1,31 +1,35 @@
 ---
-name: xray-cloudtrail
-description: AWS X-Ray and CloudTrail guidance — distributed tracing, service maps, audit logging, event history, compliance. Use when debugging distributed systems or auditing AWS API activity.
+strata_id: 0777c428-3f97-4f26-8195-84e43aa683ed
+type: note
+created: 2026-05-02T16:06:08+00:00
+modified: 2026-05-02T16:06:08.210349782+00:00
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/xray/latest/devguide/"
-    - "https://docs.aws.amazon.com/awscloudtrail/latest/userguide/"
-  pathPatterns:
-    - 'tracing/**'
-    - 'audit/**'
   bashPatterns:
-    - '\baws\s+xray\b'
-    - '\baws\s+cloudtrail\b'
+  - \baws\s+xray\b
+  - \baws\s+cloudtrail\b
+  docs:
+  - https://docs.aws.amazon.com/xray/latest/devguide/
+  - https://docs.aws.amazon.com/awscloudtrail/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-xray"
-    - "@aws-sdk/client-cloudtrail"
-    - "aws-xray-sdk"
+  - '@aws-sdk/client-xray'
+  - '@aws-sdk/client-cloudtrail'
+  - aws-xray-sdk
+  pathPatterns:
+  - tracing/**
+  - audit/**
+  priority: 4
   promptSignals:
     phrases:
-      - "x-ray"
-      - "xray"
-      - "cloudtrail"
-      - "distributed tracing"
-      - "service map"
-      - "audit log"
-      - "api activity"
-      - "trace"
+    - x-ray
+    - xray
+    - cloudtrail
+    - distributed tracing
+    - service map
+    - audit log
+    - api activity
+    - trace
+description: AWS X-Ray and CloudTrail guidance — distributed tracing, service maps, audit logging, event history, compliance. Use when debugging distributed systems or auditing AWS API activity.
+name: xray-cloudtrail
 ---
 
 # AWS X-Ray and CloudTrail

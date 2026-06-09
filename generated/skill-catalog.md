@@ -1,3 +1,10 @@
+---
+strata_id: e00a1c6d-82ed-48d6-b6f6-abc15bb70478
+type: note
+created: 2026-04-30T20:39:11+00:00
+modified: 2026-05-02T16:07:38.069714483+00:00
+---
+
 # AWS Context Pack — Skill Catalog
 
 > Auto-generated on 2026-05-02. 31 skills.

@@ -1,3 +1,10 @@
+---
+strata_id: 66f9489d-8cf9-4f24-a60d-cdc50b63986b
+type: note
+created: 2026-05-03T18:47:07+00:00
+modified: 2026-05-03T18:47:07.659405638+00:00
+---
+
 # Quick Start (60 seconds)
 
 ## 1. Install

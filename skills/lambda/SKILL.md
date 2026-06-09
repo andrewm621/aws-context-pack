@@ -1,59 +1,63 @@
 ---
-name: lambda
-description: AWS Lambda guidance — serverless compute, event-driven functions, runtimes, cold starts, layers, concurrency. Use when building, debugging, or optimizing Lambda functions.
+strata_id: ee17c6f0-f2d4-43ca-96a6-091b0b1fc0e6
+type: note
+created: 2026-04-30T20:32:30+00:00
+modified: 2026-04-30T20:32:30.796537960+00:00
 metadata:
-  priority: 8
-  docs:
-    - "https://docs.aws.amazon.com/lambda/latest/dg/"
-    - "https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html"
-  pathPatterns:
-    - 'serverless.yml'
-    - 'serverless.yaml'
-    - 'serverless.ts'
-    - 'template.yaml'
-    - 'template.yml'
-    - 'samconfig.toml'
-    - 'samconfig.yaml'
-    - 'lambda/**'
-    - 'functions/**'
-    - 'src/functions/**'
-    - 'src/lambda/**'
-    - 'src/handlers/**'
-    - 'handlers/**'
-    - 'cdk.json'
-    - 'lib/*-stack.ts'
-    - 'lib/*-stack.js'
-    - 'stacks/**'
   bashPatterns:
-    - '\baws\s+lambda\b'
-    - '\bsam\s+(build|deploy|local|invoke|start-api)\b'
-    - '\bcdk\s+(deploy|synth|diff|destroy)\b'
-    - '\bsls\s+(deploy|invoke|offline)\b'
-    - '\bserverless\s+(deploy|invoke|offline)\b'
+  - \baws\s+lambda\b
+  - \bsam\s+(build|deploy|local|invoke|start-api)\b
+  - \bcdk\s+(deploy|synth|diff|destroy)\b
+  - \bsls\s+(deploy|invoke|offline)\b
+  - \bserverless\s+(deploy|invoke|offline)\b
+  docs:
+  - https://docs.aws.amazon.com/lambda/latest/dg/
+  - https://docs.aws.amazon.com/lambda/latest/dg/best-practices.html
   importPatterns:
-    - "@aws-sdk/client-lambda"
-    - "@middy/core"
+  - '@aws-sdk/client-lambda'
+  - '@middy/core'
+  pathPatterns:
+  - serverless.yml
+  - serverless.yaml
+  - serverless.ts
+  - template.yaml
+  - template.yml
+  - samconfig.toml
+  - samconfig.yaml
+  - lambda/**
+  - functions/**
+  - src/functions/**
+  - src/lambda/**
+  - src/handlers/**
+  - handlers/**
+  - cdk.json
+  - lib/*-stack.ts
+  - lib/*-stack.js
+  - stacks/**
+  priority: 8
   promptSignals:
     phrases:
-      - "lambda function"
-      - "cold start"
-      - "serverless function"
-      - "aws lambda"
-      - "lambda handler"
-      - "lambda layer"
-      - "provisioned concurrency"
-      - "lambda timeout"
-      - "lambda memory"
+    - lambda function
+    - cold start
+    - serverless function
+    - aws lambda
+    - lambda handler
+    - lambda layer
+    - provisioned concurrency
+    - lambda timeout
+    - lambda memory
 validate:
-  - pattern: 'import.*from.*[''"]aws-sdk[''"]'
-    message: 'AWS SDK v2 detected — use @aws-sdk/client-lambda (v3) for tree-shaking and modular imports'
-    severity: error
-  - pattern: 'require\s*\(\s*[''"]aws-sdk[''"]\s*\)'
-    message: 'AWS SDK v2 detected — use @aws-sdk/client-lambda (v3) for tree-shaking and modular imports'
-    severity: error
-  - pattern: 'callback\s*\(\s*null'
-    message: 'Callback-style handler detected — use async/await pattern instead'
-    severity: recommended
+- message: AWS SDK v2 detected — use @aws-sdk/client-lambda (v3) for tree-shaking and modular imports
+  pattern: import.*from.*['"]aws-sdk['"]
+  severity: error
+- message: AWS SDK v2 detected — use @aws-sdk/client-lambda (v3) for tree-shaking and modular imports
+  pattern: require\s*\(\s*['"]aws-sdk['"]\s*\)
+  severity: error
+- message: Callback-style handler detected — use async/await pattern instead
+  pattern: callback\s*\(\s*null
+  severity: recommended
+description: AWS Lambda guidance — serverless compute, event-driven functions, runtimes, cold starts, layers, concurrency. Use when building, debugging, or optimizing Lambda functions.
+name: lambda
 ---
 
 # AWS Lambda

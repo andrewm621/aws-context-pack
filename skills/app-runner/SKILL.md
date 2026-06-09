@@ -1,24 +1,28 @@
 ---
+strata_id: 0ffc2ad2-826d-4c61-91ec-5b48492d693d
+type: note
+created: 2026-05-02T15:57:36+00:00
+modified: 2026-05-02T15:57:36.847261994+00:00
 name: app-runner
 description: AWS App Runner guidance — fully managed container service, auto-scaling, custom domains, VPC connectors. Use when deploying web apps/APIs with minimal configuration.
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/apprunner/latest/dg/"
-  pathPatterns:
-    - 'apprunner/**'
-    - 'apprunner.yaml'
   bashPatterns:
-    - '\baws\s+apprunner\b'
+  - \baws\s+apprunner\b
+  docs:
+  - https://docs.aws.amazon.com/apprunner/latest/dg/
   importPatterns:
-    - "@aws-sdk/client-apprunner"
-    - "aws-cdk-lib/aws-apprunner"
+  - '@aws-sdk/client-apprunner'
+  - aws-cdk-lib/aws-apprunner
+  pathPatterns:
+  - apprunner/**
+  - apprunner.yaml
+  priority: 4
   promptSignals:
     phrases:
-      - "app runner"
-      - "apprunner"
-      - "managed container"
-      - "auto deploy container"
+    - app runner
+    - apprunner
+    - managed container
+    - auto deploy container
 ---
 
 # AWS App Runner

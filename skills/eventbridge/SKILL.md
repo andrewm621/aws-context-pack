@@ -1,32 +1,36 @@
 ---
+strata_id: e2d5715a-b115-4d2b-a6d3-a5cd3c0c91a6
+type: note
+created: 2026-05-01T14:34:29+00:00
+modified: 2026-05-01T14:34:29.893433585+00:00
 name: eventbridge
-description: Amazon EventBridge guidance — event bus, rules, event patterns, scheduler, pipes, schema registry, archive/replay. Use when building event-driven architectures or scheduling tasks.
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/eventbridge/latest/userguide/"
-  pathPatterns:
-    - 'events/**'
-    - 'eventbridge/**'
   bashPatterns:
-    - '\baws\s+events\b'
-    - '\baws\s+scheduler\b'
+  - \baws\s+events\b
+  - \baws\s+scheduler\b
+  docs:
+  - https://docs.aws.amazon.com/eventbridge/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-eventbridge"
-    - "@aws-sdk/client-scheduler"
-    - "aws-cdk-lib/aws-events"
-    - "aws-cdk-lib/aws-events-targets"
+  - '@aws-sdk/client-eventbridge'
+  - '@aws-sdk/client-scheduler'
+  - aws-cdk-lib/aws-events
+  - aws-cdk-lib/aws-events-targets
+  pathPatterns:
+  - events/**
+  - eventbridge/**
+  priority: 6
   promptSignals:
     phrases:
-      - "eventbridge"
-      - "event bus"
-      - "event pattern"
-      - "event rule"
-      - "eventbridge scheduler"
-      - "event-driven"
-      - "cron schedule"
-      - "event pipe"
-      - "schema registry"
+    - eventbridge
+    - event bus
+    - event pattern
+    - event rule
+    - eventbridge scheduler
+    - event-driven
+    - cron schedule
+    - event pipe
+    - schema registry
+description: Amazon EventBridge guidance — event bus, rules, event patterns, scheduler, pipes, schema registry, archive/replay. Use when building event-driven architectures or scheduling tasks.
 ---
 
 ## What It Is & When to Use It

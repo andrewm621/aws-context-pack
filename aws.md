@@ -1,3 +1,10 @@
+---
+strata_id: db87ea9b-7511-4dbf-a904-f78c0007b99c
+type: note
+created: 2026-04-30T20:08:34+00:00
+modified: 2026-04-30T20:08:34.174377769+00:00
+---
+
 # AWS Context Pack — Service Knowledge Graph
 
 > This document is the master reference for understanding the AWS ecosystem.

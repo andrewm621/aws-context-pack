@@ -1,31 +1,35 @@
 ---
-name: ebs-efs
-description: Amazon EBS and EFS guidance — block storage volumes, file systems, performance tiers, snapshots, encryption. Use when configuring storage for EC2, ECS, or Lambda.
+strata_id: 16efc47d-ac85-481f-a154-1181b94be326
+type: note
+created: 2026-05-02T15:57:35+00:00
+modified: 2026-05-02T15:57:35.963595652+00:00
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/ebs/"
-    - "https://docs.aws.amazon.com/efs/"
-  pathPatterns:
-    - 'storage/**'
-    - 'volumes/**'
   bashPatterns:
-    - '\baws\s+ec2\s+(create|describe|delete|attach|detach)-volume\b'
-    - '\baws\s+efs\b'
+  - \baws\s+ec2\s+(create|describe|delete|attach|detach)-volume\b
+  - \baws\s+efs\b
+  docs:
+  - https://docs.aws.amazon.com/ebs/
+  - https://docs.aws.amazon.com/efs/
   importPatterns:
-    - "@aws-sdk/client-ebs"
-    - "@aws-sdk/client-efs"
-    - "aws-cdk-lib/aws-efs"
+  - '@aws-sdk/client-ebs'
+  - '@aws-sdk/client-efs'
+  - aws-cdk-lib/aws-efs
+  pathPatterns:
+  - storage/**
+  - volumes/**
+  priority: 4
   promptSignals:
     phrases:
-      - "ebs"
-      - "efs"
-      - "block storage"
-      - "file system"
-      - "ebs volume"
-      - "elastic file system"
-      - "ebs snapshot"
-      - "gp3"
+    - ebs
+    - efs
+    - block storage
+    - file system
+    - ebs volume
+    - elastic file system
+    - ebs snapshot
+    - gp3
+name: ebs-efs
+description: Amazon EBS and EFS guidance — block storage volumes, file systems, performance tiers, snapshots, encryption. Use when configuring storage for EC2, ECS, or Lambda.
 ---
 
 # Amazon EBS and EFS

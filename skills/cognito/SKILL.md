@@ -1,33 +1,37 @@
 ---
-name: cognito
+strata_id: fd2ccc39-b597-40fe-8bcc-2ab859d3d77b
+type: note
+created: 2026-05-01T14:38:32+00:00
+modified: 2026-05-01T14:38:32.939966152+00:00
 description: Amazon Cognito guidance — user pools, identity pools, hosted UI, OAuth/OIDC, JWT tokens, MFA, custom auth flows, federation. Use when implementing authentication and authorization with AWS.
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/cognito/latest/developerguide/"
-  pathPatterns:
-    - 'auth/**'
-    - 'cognito/**'
   bashPatterns:
-    - '\baws\s+cognito-idp\b'
-    - '\baws\s+cognito-identity\b'
+  - \baws\s+cognito-idp\b
+  - \baws\s+cognito-identity\b
+  docs:
+  - https://docs.aws.amazon.com/cognito/latest/developerguide/
   importPatterns:
-    - "@aws-sdk/client-cognito-identity-provider"
-    - "@aws-sdk/client-cognito-identity"
-    - "aws-cdk-lib/aws-cognito"
-    - "amazon-cognito-identity-js"
+  - '@aws-sdk/client-cognito-identity-provider'
+  - '@aws-sdk/client-cognito-identity'
+  - aws-cdk-lib/aws-cognito
+  - amazon-cognito-identity-js
+  pathPatterns:
+  - auth/**
+  - cognito/**
+  priority: 5
   promptSignals:
     phrases:
-      - "cognito"
-      - "user pool"
-      - "identity pool"
-      - "cognito auth"
-      - "hosted ui"
-      - "cognito jwt"
-      - "cognito mfa"
-      - "cognito federation"
-      - "cognito trigger"
-      - "aws authentication"
+    - cognito
+    - user pool
+    - identity pool
+    - cognito auth
+    - hosted ui
+    - cognito jwt
+    - cognito mfa
+    - cognito federation
+    - cognito trigger
+    - aws authentication
+name: cognito
 ---
 
 ## What It Is & When to Use It

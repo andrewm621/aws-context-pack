@@ -1,3 +1,10 @@
+---
+strata_id: 5dff80a8-86d3-4ea4-8ee2-4dd1fd07054d
+type: note
+created: 2026-05-01T18:37:05+00:00
+modified: 2026-05-01T18:37:05.028327769+00:00
+---
+
 # DynamoDB GSI Patterns
 
 ## What GSIs Are

@@ -1,28 +1,32 @@
 ---
-name: elasticache
+strata_id: 47497531-6df2-4fc6-a20c-a2e1e94a0f1a
+type: note
+created: 2026-05-02T16:00:26+00:00
+modified: 2026-05-02T16:00:26.386626086+00:00
 description: Amazon ElastiCache guidance — Redis and Memcached, caching strategies, cluster modes, serverless, session storage. Use when adding caching or in-memory data stores to AWS applications.
+name: elasticache
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/"
-  pathPatterns:
-    - 'cache/**'
-    - 'redis/**'
   bashPatterns:
-    - '\baws\s+elasticache\b'
+  - \baws\s+elasticache\b
+  docs:
+  - https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/
   importPatterns:
-    - "@aws-sdk/client-elasticache"
-    - "aws-cdk-lib/aws-elasticache"
-    - "ioredis"
-    - "redis"
+  - '@aws-sdk/client-elasticache'
+  - aws-cdk-lib/aws-elasticache
+  - ioredis
+  - redis
+  pathPatterns:
+  - cache/**
+  - redis/**
+  priority: 4
   promptSignals:
     phrases:
-      - "elasticache"
-      - "redis"
-      - "memcached"
-      - "caching layer"
-      - "session store"
-      - "redis cluster"
+    - elasticache
+    - redis
+    - memcached
+    - caching layer
+    - session store
+    - redis cluster
 ---
 
 ## What It Is & When to Use It

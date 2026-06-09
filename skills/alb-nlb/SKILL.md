@@ -1,28 +1,32 @@
 ---
-name: alb-nlb
-description: Elastic Load Balancing guidance — ALB, NLB, target groups, health checks, SSL termination, path-based routing. Use when configuring load balancers for web applications or services.
+strata_id: 32ba20e3-a0de-48b4-8299-4ff2e28f9b79
+type: note
+created: 2026-05-02T16:06:46+00:00
+modified: 2026-05-02T16:06:46.040836396+00:00
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/"
-  pathPatterns:
-    - 'loadbalancer/**'
-    - 'lb/**'
   bashPatterns:
-    - '\baws\s+elbv2\b'
+  - \baws\s+elbv2\b
+  docs:
+  - https://docs.aws.amazon.com/elasticloadbalancing/latest/application/
   importPatterns:
-    - "@aws-sdk/client-elastic-load-balancing-v2"
-    - "aws-cdk-lib/aws-elasticloadbalancingv2"
+  - '@aws-sdk/client-elastic-load-balancing-v2'
+  - aws-cdk-lib/aws-elasticloadbalancingv2
+  pathPatterns:
+  - loadbalancer/**
+  - lb/**
+  priority: 4
   promptSignals:
     phrases:
-      - "alb"
-      - "nlb"
-      - "load balancer"
-      - "target group"
-      - "application load balancer"
-      - "network load balancer"
-      - "health check"
-      - "ssl termination"
+    - alb
+    - nlb
+    - load balancer
+    - target group
+    - application load balancer
+    - network load balancer
+    - health check
+    - ssl termination
+description: Elastic Load Balancing guidance — ALB, NLB, target groups, health checks, SSL termination, path-based routing. Use when configuring load balancers for web applications or services.
+name: alb-nlb
 ---
 
 # Elastic Load Balancing — ALB and NLB

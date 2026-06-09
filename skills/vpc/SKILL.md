@@ -1,32 +1,36 @@
 ---
-name: vpc
-description: Amazon VPC guidance — networking, subnets, security groups, NAT gateway costs, VPC endpoints, peering. Use when configuring networking, debugging connectivity, or optimizing network costs.
+strata_id: eeb16662-93a7-421d-a16f-69d01dcca522
+type: note
+created: 2026-04-30T20:43:05+00:00
+modified: 2026-04-30T20:43:05.028421990+00:00
 metadata:
-  priority: 7
-  docs:
-    - "https://docs.aws.amazon.com/vpc/latest/userguide/"
-  pathPatterns:
-    - 'vpc/**'
-    - 'network/**'
-    - 'networking/**'
   bashPatterns:
-    - '\baws\s+ec2\s+(describe-vpcs|create-vpc|describe-subnets|describe-security-groups|describe-nat-gateways)\b'
-    - '\baws\s+ec2\s+describe-vpc-endpoints\b'
+  - \baws\s+ec2\s+(describe-vpcs|create-vpc|describe-subnets|describe-security-groups|describe-nat-gateways)\b
+  - \baws\s+ec2\s+describe-vpc-endpoints\b
+  docs:
+  - https://docs.aws.amazon.com/vpc/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-ec2"
+  - '@aws-sdk/client-ec2'
+  pathPatterns:
+  - vpc/**
+  - network/**
+  - networking/**
+  priority: 7
   promptSignals:
     phrases:
-      - "vpc"
-      - "subnet"
-      - "security group"
-      - "nat gateway"
-      - "vpc endpoint"
-      - "vpc peering"
-      - "private subnet"
-      - "public subnet"
-      - "network acl"
-      - "transit gateway"
-      - "cidr block"
+    - vpc
+    - subnet
+    - security group
+    - nat gateway
+    - vpc endpoint
+    - vpc peering
+    - private subnet
+    - public subnet
+    - network acl
+    - transit gateway
+    - cidr block
+name: vpc
+description: Amazon VPC guidance — networking, subnets, security groups, NAT gateway costs, VPC endpoints, peering. Use when configuring networking, debugging connectivity, or optimizing network costs.
 ---
 
 # Amazon VPC

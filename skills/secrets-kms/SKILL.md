@@ -1,35 +1,39 @@
 ---
-name: secrets-kms
-description: AWS Secrets Manager and KMS guidance — secret rotation, encryption keys, envelope encryption, key policies, secret versioning. Use when managing secrets, API keys, database credentials, or encryption.
+strata_id: 3acbbdd3-fc2f-4741-809a-07015b77c6f1
+type: note
+created: 2026-05-01T14:38:57+00:00
+modified: 2026-05-01T14:38:57.876584327+00:00
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/secretsmanager/latest/userguide/"
-    - "https://docs.aws.amazon.com/kms/latest/developerguide/"
-  pathPatterns:
-    - 'secrets/**'
-    - 'encryption/**'
-    - 'kms/**'
   bashPatterns:
-    - '\baws\s+secretsmanager\b'
-    - '\baws\s+kms\b'
+  - \baws\s+secretsmanager\b
+  - \baws\s+kms\b
+  docs:
+  - https://docs.aws.amazon.com/secretsmanager/latest/userguide/
+  - https://docs.aws.amazon.com/kms/latest/developerguide/
   importPatterns:
-    - "@aws-sdk/client-secrets-manager"
-    - "@aws-sdk/client-kms"
-    - "aws-cdk-lib/aws-secretsmanager"
-    - "aws-cdk-lib/aws-kms"
+  - '@aws-sdk/client-secrets-manager'
+  - '@aws-sdk/client-kms'
+  - aws-cdk-lib/aws-secretsmanager
+  - aws-cdk-lib/aws-kms
+  pathPatterns:
+  - secrets/**
+  - encryption/**
+  - kms/**
+  priority: 5
   promptSignals:
     phrases:
-      - "secrets manager"
-      - "kms"
-      - "encryption key"
-      - "secret rotation"
-      - "api key storage"
-      - "database credentials"
-      - "envelope encryption"
-      - "cmk"
-      - "customer managed key"
-      - "aws secret"
+    - secrets manager
+    - kms
+    - encryption key
+    - secret rotation
+    - api key storage
+    - database credentials
+    - envelope encryption
+    - cmk
+    - customer managed key
+    - aws secret
+name: secrets-kms
+description: AWS Secrets Manager and KMS guidance — secret rotation, encryption keys, envelope encryption, key policies, secret versioning. Use when managing secrets, API keys, database credentials, or encryption.
 ---
 
 ## What It Is & When to Use It

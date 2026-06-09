@@ -1,37 +1,41 @@
 ---
-name: cloudformation
+strata_id: 0438ff52-38ed-4b42-a5c0-9acf07e0f5ec
+type: note
+created: 2026-05-01T14:39:44+00:00
+modified: 2026-05-01T14:39:44.058818585+00:00
 description: AWS CloudFormation guidance — infrastructure as code with YAML/JSON templates, stacks, change sets, nested stacks, stack sets, drift detection. Use when working with CloudFormation templates directly (not via CDK).
+name: cloudformation
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/"
-  pathPatterns:
-    - 'template.yaml'
-    - 'template.yml'
-    - 'template.json'
-    - 'cloudformation/**'
-    - 'cfn/**'
-    - '**/*.template.yaml'
-    - '**/*.template.yml'
-    - '**/*.template.json'
   bashPatterns:
-    - '\baws\s+cloudformation\b'
-    - '\baws\s+cfn\b'
-    - '\brain\s+'
+  - \baws\s+cloudformation\b
+  - \baws\s+cfn\b
+  - \brain\s+
+  docs:
+  - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/
   importPatterns:
-    - "@aws-sdk/client-cloudformation"
+  - '@aws-sdk/client-cloudformation'
+  pathPatterns:
+  - template.yaml
+  - template.yml
+  - template.json
+  - cloudformation/**
+  - cfn/**
+  - '**/*.template.yaml'
+  - '**/*.template.yml'
+  - '**/*.template.json'
+  priority: 5
   promptSignals:
     phrases:
-      - "cloudformation"
-      - "cfn template"
-      - "cloudformation stack"
-      - "change set"
-      - "nested stack"
-      - "stack set"
-      - "cfn"
-      - "cloudformation drift"
-      - "sam template"
-      - "rain"
+    - cloudformation
+    - cfn template
+    - cloudformation stack
+    - change set
+    - nested stack
+    - stack set
+    - cfn
+    - cloudformation drift
+    - sam template
+    - rain
 ---
 
 ## What It Is & When to Use It

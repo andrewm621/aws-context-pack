@@ -1,3 +1,10 @@
+---
+strata_id: d6313d44-81bc-40b1-8131-cb2e8d303098
+type: note
+created: 2026-05-03T18:32:06+00:00
+modified: 2026-05-03T18:32:06.073310894+00:00
+---
+
 # Context Pack Framework — Building Claude Code Plugins for Any Platform/API
 
 > Reference guide for building new Claude Code context packs. Based on the patterns

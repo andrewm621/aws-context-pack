@@ -1,3 +1,10 @@
+---
+strata_id: eec3195c-b6d9-4b62-9d92-cde015b1f698
+type: note
+created: 2026-04-30T20:02:45+00:00
+modified: 2026-04-30T20:02:45.336155781+00:00
+---
+
 # AWS Context Pack — Development Guide
 
 ## What This Is

@@ -1,3 +1,10 @@
+---
+strata_id: 71eba8fb-344d-49af-a63f-6052fab8bfbb
+type: note
+created: 2026-05-01T18:38:05+00:00
+modified: 2026-05-01T18:38:05.750575153+00:00
+---
+
 # CDK Deployment Patterns
 
 ## CDK Pipelines: Self-Mutating CI/CD

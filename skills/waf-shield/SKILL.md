@@ -1,31 +1,35 @@
 ---
-name: waf-shield
+strata_id: ed3368d3-1536-4e97-b9cb-2a56c8ed3342
+type: note
+created: 2026-05-03T18:29:22+00:00
+modified: 2026-05-03T18:29:22.228869164+00:00
 description: AWS WAF and Shield guidance — web application firewall, DDoS protection, rate limiting, bot control, managed rules. Use when protecting web applications from attacks.
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/waf/latest/developerguide/"
-  pathPatterns:
-    - 'waf/**'
-    - 'security/**'
-    - 'firewall/**'
   bashPatterns:
-    - '\baws\s+wafv2\b'
-    - '\baws\s+shield\b'
+  - \baws\s+wafv2\b
+  - \baws\s+shield\b
+  docs:
+  - https://docs.aws.amazon.com/waf/latest/developerguide/
   importPatterns:
-    - "@aws-sdk/client-wafv2"
-    - "@aws-sdk/client-shield"
-    - "aws-cdk-lib/aws-wafv2"
+  - '@aws-sdk/client-wafv2'
+  - '@aws-sdk/client-shield'
+  - aws-cdk-lib/aws-wafv2
+  pathPatterns:
+  - waf/**
+  - security/**
+  - firewall/**
+  priority: 4
   promptSignals:
     phrases:
-      - "waf"
-      - "web application firewall"
-      - "ddos"
-      - "shield"
-      - "rate limiting"
-      - "bot protection"
-      - "ip blocking"
-      - "managed rules"
+    - waf
+    - web application firewall
+    - ddos
+    - shield
+    - rate limiting
+    - bot protection
+    - ip blocking
+    - managed rules
+name: waf-shield
 ---
 
 ## Mental Model

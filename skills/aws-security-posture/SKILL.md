@@ -1,34 +1,38 @@
 ---
-name: aws-security-posture
-description: AWS security posture guidance — Security Hub, GuardDuty, Config, Inspector, detective controls, compliance frameworks. Use when implementing security monitoring, compliance, or threat detection.
+strata_id: 0848fcfe-5d58-4444-953f-99a123899bad
+type: note
+created: 2026-05-03T18:29:24+00:00
+modified: 2026-05-03T18:29:24.686103322+00:00
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/securityhub/latest/userguide/"
-  pathPatterns:
-    - 'security/**'
-    - 'compliance/**'
   bashPatterns:
-    - '\baws\s+securityhub\b'
-    - '\baws\s+guardduty\b'
-    - '\baws\s+inspector2\b'
-    - '\baws\s+configservice\b'
+  - \baws\s+securityhub\b
+  - \baws\s+guardduty\b
+  - \baws\s+inspector2\b
+  - \baws\s+configservice\b
+  docs:
+  - https://docs.aws.amazon.com/securityhub/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-securityhub"
-    - "@aws-sdk/client-guardduty"
-    - "@aws-sdk/client-inspector2"
-    - "@aws-sdk/client-config-service"
+  - '@aws-sdk/client-securityhub'
+  - '@aws-sdk/client-guardduty'
+  - '@aws-sdk/client-inspector2'
+  - '@aws-sdk/client-config-service'
+  pathPatterns:
+  - security/**
+  - compliance/**
+  priority: 4
   promptSignals:
     phrases:
-      - "security hub"
-      - "guardduty"
-      - "aws config"
-      - "inspector"
-      - "security posture"
-      - "compliance"
-      - "threat detection"
-      - "security finding"
-      - "cis benchmark"
+    - security hub
+    - guardduty
+    - aws config
+    - inspector
+    - security posture
+    - compliance
+    - threat detection
+    - security finding
+    - cis benchmark
+name: aws-security-posture
+description: AWS security posture guidance — Security Hub, GuardDuty, Config, Inspector, detective controls, compliance frameworks. Use when implementing security monitoring, compliance, or threat detection.
 ---
 
 # AWS Security Posture

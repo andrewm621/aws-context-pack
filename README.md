@@ -1,3 +1,10 @@
+---
+strata_id: 2d72bab5-14ab-4ab6-9548-b8b9aaa4f1d2
+type: note
+created: 2026-05-02T16:07:59+00:00
+modified: 2026-05-02T16:07:59.291370217+00:00
+---
+
 # AWS Context Pack
 
 A Claude Code plugin that provides AI-consumable knowledge about AWS services. When you're working with AWS files, commands, or discussing AWS topics, relevant service guidance is automatically injected into your conversation.

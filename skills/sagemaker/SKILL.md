@@ -1,31 +1,35 @@
 ---
-name: sagemaker
+strata_id: 892dba7b-ebc1-4c3c-a894-e1a8e23ec278
+type: note
+created: 2026-05-02T16:03:31+00:00
+modified: 2026-05-02T16:03:31.137010277+00:00
 description: Amazon SageMaker guidance — ML model training, deployment, endpoints, notebooks, pipelines, feature store. Use when building or deploying machine learning models on AWS.
+name: sagemaker
 metadata:
-  priority: 4
-  docs:
-    - "https://docs.aws.amazon.com/sagemaker/latest/dg/"
-  pathPatterns:
-    - 'sagemaker/**'
-    - 'ml/**'
-    - 'models/**'
-    - 'notebooks/**'
   bashPatterns:
-    - '\baws\s+sagemaker\b'
+  - \baws\s+sagemaker\b
+  docs:
+  - https://docs.aws.amazon.com/sagemaker/latest/dg/
   importPatterns:
-    - "@aws-sdk/client-sagemaker"
-    - "@aws-sdk/client-sagemaker-runtime"
-    - "aws-cdk-lib/aws-sagemaker"
+  - '@aws-sdk/client-sagemaker'
+  - '@aws-sdk/client-sagemaker-runtime'
+  - aws-cdk-lib/aws-sagemaker
+  pathPatterns:
+  - sagemaker/**
+  - ml/**
+  - models/**
+  - notebooks/**
+  priority: 4
   promptSignals:
     phrases:
-      - "sagemaker"
-      - "ml model"
-      - "model training"
-      - "model endpoint"
-      - "sagemaker notebook"
-      - "sagemaker pipeline"
-      - "inference endpoint"
-      - "model deployment"
+    - sagemaker
+    - ml model
+    - model training
+    - model endpoint
+    - sagemaker notebook
+    - sagemaker pipeline
+    - inference endpoint
+    - model deployment
 ---
 
 ## What It Is & When to Use It

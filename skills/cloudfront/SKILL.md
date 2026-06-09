@@ -1,42 +1,46 @@
 ---
+strata_id: 5fe32d44-fee5-4155-9e78-88b0fdad90c5
+type: note
+created: 2026-05-01T14:35:05+00:00
+modified: 2026-05-01T14:35:05.720748470+00:00
+validate:
+- message: AWS SDK v2 CloudFront constructor — use new CloudFrontClient({}) from @aws-sdk/client-cloudfront
+  pattern: new AWS\.CloudFront\(
+  severity: error
+- message: AWS SDK v2 detected — use @aws-sdk/client-cloudfront (v3) for tree-shaking
+  pattern: import.*from.*['"]aws-sdk['"]
+  severity: error
+- message: Origin Access Identity (OAI) is legacy — use Origin Access Control (OAC) instead (S3BucketOrigin.withOriginAccessControl in CDK)
+  pattern: OriginAccessIdentity
+  severity: recommended
 name: cloudfront
-description: Amazon CloudFront guidance — CDN, edge caching, origins, behaviors, functions, Lambda@Edge, signed URLs, cache invalidation. Use when serving content globally with low latency.
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/"
-  pathPatterns:
-    - 'cdn/**'
-    - 'cloudfront/**'
-    - 'edge/**'
   bashPatterns:
-    - '\baws\s+cloudfront\b'
+  - \baws\s+cloudfront\b
+  docs:
+  - https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/
   importPatterns:
-    - "@aws-sdk/client-cloudfront"
-    - "aws-cdk-lib/aws-cloudfront"
-    - "aws-cdk-lib/aws-cloudfront-origins"
+  - '@aws-sdk/client-cloudfront'
+  - aws-cdk-lib/aws-cloudfront
+  - aws-cdk-lib/aws-cloudfront-origins
+  pathPatterns:
+  - cdn/**
+  - cloudfront/**
+  - edge/**
+  priority: 5
   promptSignals:
     phrases:
-      - "cloudfront"
-      - "cdn"
-      - "edge cache"
-      - "cache invalidation"
-      - "signed url"
-      - "lambda@edge"
-      - "cloudfront function"
-      - "origin"
-      - "cache behavior"
-      - "content delivery"
-validate:
-  - pattern: 'new AWS\.CloudFront\('
-    message: 'AWS SDK v2 CloudFront constructor — use new CloudFrontClient({}) from @aws-sdk/client-cloudfront'
-    severity: error
-  - pattern: 'import.*from.*[''"]aws-sdk[''"]'
-    message: 'AWS SDK v2 detected — use @aws-sdk/client-cloudfront (v3) for tree-shaking'
-    severity: error
-  - pattern: 'OriginAccessIdentity'
-    message: 'Origin Access Identity (OAI) is legacy — use Origin Access Control (OAC) instead (S3BucketOrigin.withOriginAccessControl in CDK)'
-    severity: recommended
+    - cloudfront
+    - cdn
+    - edge cache
+    - cache invalidation
+    - signed url
+    - lambda@edge
+    - cloudfront function
+    - origin
+    - cache behavior
+    - content delivery
+description: Amazon CloudFront guidance — CDN, edge caching, origins, behaviors, functions, Lambda@Edge, signed URLs, cache invalidation. Use when serving content globally with low latency.
 ---
 
 # Amazon CloudFront

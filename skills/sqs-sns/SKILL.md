@@ -1,33 +1,37 @@
 ---
-name: sqs-sns
+strata_id: 6dc87f85-bb39-4d97-a454-0a4de8c99af4
+type: note
+created: 2026-04-30T20:59:08+00:00
+modified: 2026-04-30T20:59:08.865501848+00:00
 description: Amazon SQS and SNS guidance — message queues, pub/sub, FIFO ordering, dead-letter queues, fan-out patterns, event-driven architecture. Use when building async messaging or event-driven systems.
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/sqs/"
-    - "https://docs.aws.amazon.com/sns/"
-  pathPatterns:
-    - 'queues/**'
-    - 'messaging/**'
-    - 'events/**'
   bashPatterns:
-    - '\baws\s+sqs\b'
-    - '\baws\s+sns\b'
+  - \baws\s+sqs\b
+  - \baws\s+sns\b
+  docs:
+  - https://docs.aws.amazon.com/sqs/
+  - https://docs.aws.amazon.com/sns/
   importPatterns:
-    - "@aws-sdk/client-sqs"
-    - "@aws-sdk/client-sns"
+  - '@aws-sdk/client-sqs'
+  - '@aws-sdk/client-sns'
+  pathPatterns:
+  - queues/**
+  - messaging/**
+  - events/**
+  priority: 6
   promptSignals:
     phrases:
-      - "sqs"
-      - "sns"
-      - "message queue"
-      - "dead letter queue"
-      - "fifo queue"
-      - "pub sub"
-      - "fan-out"
-      - "sns topic"
-      - "sqs queue"
-      - "event-driven"
+    - sqs
+    - sns
+    - message queue
+    - dead letter queue
+    - fifo queue
+    - pub sub
+    - fan-out
+    - sns topic
+    - sqs queue
+    - event-driven
+name: sqs-sns
 ---
 
 ## What It Is & When to Use It

@@ -1,38 +1,42 @@
 ---
+strata_id: e3f2b9d3-1cc8-4150-8ab1-8cd314bd1ba7
+type: note
+created: 2026-04-30T20:47:47+00:00
+modified: 2026-04-30T20:47:47.826208337+00:00
 name: cdk
 description: AWS CDK guidance — infrastructure as code with TypeScript/Python, construct patterns, L1/L2/L3 constructs, stacks, deployment, testing. Use when building or configuring AWS infrastructure with CDK.
 metadata:
-  priority: 7
-  docs:
-    - "https://docs.aws.amazon.com/cdk/v2/guide/"
-  pathPatterns:
-    - 'cdk.json'
-    - 'cdk.out/**'
-    - 'lib/*-stack.ts'
-    - 'lib/*-stack.js'
-    - 'bin/*.ts'
-    - 'bin/*.js'
-    - 'stacks/**'
-    - 'constructs/**'
-    - 'cdk.context.json'
   bashPatterns:
-    - '\bcdk\s+(deploy|synth|diff|destroy|bootstrap|ls|list|watch)\b'
-    - '\bnpx\s+cdk\b'
+  - \bcdk\s+(deploy|synth|diff|destroy|bootstrap|ls|list|watch)\b
+  - \bnpx\s+cdk\b
+  docs:
+  - https://docs.aws.amazon.com/cdk/v2/guide/
   importPatterns:
-    - "aws-cdk-lib"
-    - "constructs"
+  - aws-cdk-lib
+  - constructs
+  pathPatterns:
+  - cdk.json
+  - cdk.out/**
+  - lib/*-stack.ts
+  - lib/*-stack.js
+  - bin/*.ts
+  - bin/*.js
+  - stacks/**
+  - constructs/**
+  - cdk.context.json
+  priority: 7
   promptSignals:
     phrases:
-      - "cdk"
-      - "cdk deploy"
-      - "cdk synth"
-      - "cdk stack"
-      - "cdk construct"
-      - "infrastructure as code"
-      - "cloudformation stack"
-      - "cdk bootstrap"
-      - "l2 construct"
-      - "cdk pipeline"
+    - cdk
+    - cdk deploy
+    - cdk synth
+    - cdk stack
+    - cdk construct
+    - infrastructure as code
+    - cloudformation stack
+    - cdk bootstrap
+    - l2 construct
+    - cdk pipeline
 ---
 
 ## What It Is & When to Use It

@@ -1,49 +1,53 @@
 ---
-name: dynamodb
+strata_id: c2902043-d043-4bf2-8ef8-e00207778259
+type: note
+created: 2026-04-30T20:35:21+00:00
+modified: 2026-04-30T20:35:21.144340575+00:00
+validate:
+- message: AWS SDK v2 detected — use @aws-sdk/client-dynamodb and @aws-sdk/lib-dynamodb (v3)
+  pattern: import.*from.*['"]aws-sdk['"]
+  severity: error
+- message: AWS SDK v2 DynamoDB — use DynamoDBClient from @aws-sdk/client-dynamodb
+  pattern: new AWS\.DynamoDB\(
+  severity: error
+- message: DynamoDB Scan reads every item — prefer Query with partition key for performance
+  pattern: \.scan\(
+  severity: recommended
 description: Amazon DynamoDB guidance — NoSQL key-value and document database, single-table design, GSI patterns, capacity modes, streams. Use when designing, querying, or optimizing DynamoDB tables.
+name: dynamodb
 metadata:
-  priority: 8
-  docs:
-    - "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/"
-    - "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html"
-  pathPatterns:
-    - 'dynamodb/**'
-    - 'tables/**'
-    - '**/dynamodb*.ts'
-    - '**/dynamodb*.js'
-    - '**/table*.ts'
-    - '**/table*.js'
   bashPatterns:
-    - '\baws\s+dynamodb\b'
+  - \baws\s+dynamodb\b
+  docs:
+  - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/
+  - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html
   importPatterns:
-    - "@aws-sdk/client-dynamodb"
-    - "@aws-sdk/lib-dynamodb"
-    - "dynamoose"
-    - "electrodb"
+  - '@aws-sdk/client-dynamodb'
+  - '@aws-sdk/lib-dynamodb'
+  - dynamoose
+  - electrodb
+  pathPatterns:
+  - dynamodb/**
+  - tables/**
+  - '**/dynamodb*.ts'
+  - '**/dynamodb*.js'
+  - '**/table*.ts'
+  - '**/table*.js'
+  priority: 8
   promptSignals:
     phrases:
-      - "dynamodb"
-      - "dynamo db"
-      - "partition key"
-      - "sort key"
-      - "single table design"
-      - "global secondary index"
-      - "gsi"
-      - "nosql"
-      - "dynamodb streams"
-      - "on-demand capacity"
-      - "provisioned capacity"
-      - "hot partition"
-validate:
-  - pattern: 'import.*from.*[''"]aws-sdk[''"]'
-    message: 'AWS SDK v2 detected — use @aws-sdk/client-dynamodb and @aws-sdk/lib-dynamodb (v3)'
-    severity: error
-  - pattern: 'new AWS\.DynamoDB\('
-    message: 'AWS SDK v2 DynamoDB — use DynamoDBClient from @aws-sdk/client-dynamodb'
-    severity: error
-  - pattern: '\.scan\('
-    message: 'DynamoDB Scan reads every item — prefer Query with partition key for performance'
-    severity: recommended
+    - dynamodb
+    - dynamo db
+    - partition key
+    - sort key
+    - single table design
+    - global secondary index
+    - gsi
+    - nosql
+    - dynamodb streams
+    - on-demand capacity
+    - provisioned capacity
+    - hot partition
 ---
 
 # Amazon DynamoDB

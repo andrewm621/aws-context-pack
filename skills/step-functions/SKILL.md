@@ -1,34 +1,38 @@
 ---
+strata_id: eaa5ecc4-c4bc-405b-a0f9-bc187c84fdde
+type: note
+created: 2026-05-01T14:34:30+00:00
+modified: 2026-05-01T14:34:30.748584328+00:00
 name: step-functions
 description: AWS Step Functions guidance — workflow orchestration, state machines, Express vs Standard, parallel execution, error handling, service integrations. Use when building multi-step workflows or orchestrating AWS services.
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/step-functions/latest/dg/"
-  pathPatterns:
-    - 'stepfunctions/**'
-    - 'workflows/**'
-    - 'state-machines/**'
-    - 'asl/**'
-    - '**/*.asl.json'
   bashPatterns:
-    - '\baws\s+stepfunctions\b'
-    - '\baws\s+sfn\b'
+  - \baws\s+stepfunctions\b
+  - \baws\s+sfn\b
+  docs:
+  - https://docs.aws.amazon.com/step-functions/latest/dg/
   importPatterns:
-    - "@aws-sdk/client-sfn"
-    - "aws-cdk-lib/aws-stepfunctions"
-    - "aws-cdk-lib/aws-stepfunctions-tasks"
+  - '@aws-sdk/client-sfn'
+  - aws-cdk-lib/aws-stepfunctions
+  - aws-cdk-lib/aws-stepfunctions-tasks
+  pathPatterns:
+  - stepfunctions/**
+  - workflows/**
+  - state-machines/**
+  - asl/**
+  - '**/*.asl.json'
+  priority: 6
   promptSignals:
     phrases:
-      - "step functions"
-      - "state machine"
-      - "workflow orchestration"
-      - "step function"
-      - "asl"
-      - "parallel execution"
-      - "workflow"
-      - "saga pattern"
-      - "orchestration"
+    - step functions
+    - state machine
+    - workflow orchestration
+    - step function
+    - asl
+    - parallel execution
+    - workflow
+    - saga pattern
+    - orchestration
 ---
 
 # AWS Step Functions

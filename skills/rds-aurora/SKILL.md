@@ -1,37 +1,41 @@
 ---
-name: rds-aurora
-description: Amazon RDS and Aurora guidance — managed relational databases, PostgreSQL, MySQL, connection pooling, read replicas, Multi-AZ, backups, Performance Insights. Use when working with relational databases on AWS.
+strata_id: ba6f5970-28ed-49d5-82b4-1e4032749d10
+type: note
+created: 2026-05-01T14:33:38+00:00
+modified: 2026-05-01T14:33:38.402284446+00:00
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/"
-    - "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/"
-  pathPatterns:
-    - 'database/**'
-    - 'db/**'
-    - 'migrations/**'
-    - 'prisma/**'
-    - 'drizzle/**'
   bashPatterns:
-    - '\baws\s+rds\b'
-    - '\bpsql\b'
-    - '\bmysql\b'
+  - \baws\s+rds\b
+  - \bpsql\b
+  - \bmysql\b
+  docs:
+  - https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/
+  - https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/
   importPatterns:
-    - "@aws-sdk/client-rds"
-    - "@aws-sdk/client-rds-data"
-    - "aws-cdk-lib/aws-rds"
+  - '@aws-sdk/client-rds'
+  - '@aws-sdk/client-rds-data'
+  - aws-cdk-lib/aws-rds
+  pathPatterns:
+  - database/**
+  - db/**
+  - migrations/**
+  - prisma/**
+  - drizzle/**
+  priority: 6
   promptSignals:
     phrases:
-      - "rds"
-      - "aurora"
-      - "postgresql"
-      - "mysql"
-      - "database instance"
-      - "read replica"
-      - "multi-az"
-      - "rds proxy"
-      - "aurora serverless"
-      - "connection pooling"
+    - rds
+    - aurora
+    - postgresql
+    - mysql
+    - database instance
+    - read replica
+    - multi-az
+    - rds proxy
+    - aurora serverless
+    - connection pooling
+description: Amazon RDS and Aurora guidance — managed relational databases, PostgreSQL, MySQL, connection pooling, read replicas, Multi-AZ, backups, Performance Insights. Use when working with relational databases on AWS.
+name: rds-aurora
 ---
 
 ## What It Is & When to Use It

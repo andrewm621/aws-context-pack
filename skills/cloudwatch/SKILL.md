@@ -1,33 +1,37 @@
 ---
-name: cloudwatch
+strata_id: 6ec1fa84-a0c8-4b4e-86f9-abae4458ebd8
+type: note
+created: 2026-04-30T20:56:30+00:00
+modified: 2026-04-30T20:56:30.233300794+00:00
 description: Amazon CloudWatch guidance — metrics, logs, alarms, dashboards, Logs Insights, custom metrics, anomaly detection. Use when setting up monitoring, debugging with logs, or creating alerts.
 metadata:
-  priority: 6
-  docs:
-    - "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/"
-  pathPatterns:
-    - 'monitoring/**'
-    - 'observability/**'
-    - 'dashboards/**'
-    - 'alarms/**'
   bashPatterns:
-    - '\baws\s+cloudwatch\b'
-    - '\baws\s+logs\b'
+  - \baws\s+cloudwatch\b
+  - \baws\s+logs\b
+  docs:
+  - https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/
   importPatterns:
-    - "@aws-sdk/client-cloudwatch"
-    - "@aws-sdk/client-cloudwatch-logs"
+  - '@aws-sdk/client-cloudwatch'
+  - '@aws-sdk/client-cloudwatch-logs'
+  pathPatterns:
+  - monitoring/**
+  - observability/**
+  - dashboards/**
+  - alarms/**
+  priority: 6
   promptSignals:
     phrases:
-      - "cloudwatch"
-      - "cloudwatch logs"
-      - "cloudwatch alarm"
-      - "cloudwatch metric"
-      - "logs insights"
-      - "custom metric"
-      - "cloudwatch dashboard"
-      - "log group"
-      - "metric filter"
-      - "cloudwatch anomaly"
+    - cloudwatch
+    - cloudwatch logs
+    - cloudwatch alarm
+    - cloudwatch metric
+    - logs insights
+    - custom metric
+    - cloudwatch dashboard
+    - log group
+    - metric filter
+    - cloudwatch anomaly
+name: cloudwatch
 ---
 
 ## What It Is & When to Use It

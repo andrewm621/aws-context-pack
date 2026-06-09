@@ -1,3 +1,10 @@
+---
+strata_id: 4f04552a-0796-432f-84ae-cc52b7d221fb
+type: note
+created: 2026-05-01T18:37:32+00:00
+modified: 2026-05-01T18:37:32.661448850+00:00
+---
+
 # IAM Cross-Account Access Reference
 
 ## Why Cross-Account

@@ -1,46 +1,50 @@
 ---
-name: s3
+strata_id: 496e2bdf-fbe9-46fd-b06c-ad15000d2dca
+type: note
+created: 2026-04-30T20:34:09+00:00
+modified: 2026-04-30T20:34:09.464009657+00:00
 description: Amazon S3 guidance — object storage, storage classes, access patterns, presigned URLs, event notifications, lifecycle policies. Use when working with S3 buckets, objects, or file uploads.
+name: s3
+validate:
+- message: AWS SDK v2 detected — use @aws-sdk/client-s3 (v3) for tree-shaking
+  pattern: import.*from.*['"]aws-sdk['"]
+  severity: error
+- message: AWS SDK v2 S3 constructor — use new S3Client({}) from @aws-sdk/client-s3
+  pattern: new AWS\.S3\(
+  severity: error
+- message: SDK v2 method style — use s3.send(new PutObjectCommand(params)) in v3
+  pattern: \.putObject\(
+  severity: recommended
 metadata:
-  priority: 8
-  docs:
-    - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/"
-    - "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html"
-  pathPatterns:
-    - 's3/**'
-    - 'storage/**'
-    - 'uploads/**'
-    - 'buckets/**'
   bashPatterns:
-    - '\baws\s+s3\b'
-    - '\baws\s+s3api\b'
-    - '\baws\s+s3control\b'
+  - \baws\s+s3\b
+  - \baws\s+s3api\b
+  - \baws\s+s3control\b
+  docs:
+  - https://docs.aws.amazon.com/AmazonS3/latest/userguide/
+  - https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance.html
   importPatterns:
-    - "@aws-sdk/client-s3"
-    - "@aws-sdk/s3-request-presigner"
-    - "@aws-sdk/lib-storage"
+  - '@aws-sdk/client-s3'
+  - '@aws-sdk/s3-request-presigner'
+  - '@aws-sdk/lib-storage'
+  pathPatterns:
+  - s3/**
+  - storage/**
+  - uploads/**
+  - buckets/**
+  priority: 8
   promptSignals:
     phrases:
-      - "s3 bucket"
-      - "s3 upload"
-      - "presigned url"
-      - "object storage"
-      - "storage class"
-      - "s3 lifecycle"
-      - "s3 event"
-      - "s3 transfer"
-      - "glacier"
-      - "intelligent tiering"
-validate:
-  - pattern: 'import.*from.*[''"]aws-sdk[''"]'
-    message: 'AWS SDK v2 detected — use @aws-sdk/client-s3 (v3) for tree-shaking'
-    severity: error
-  - pattern: 'new AWS\.S3\('
-    message: 'AWS SDK v2 S3 constructor — use new S3Client({}) from @aws-sdk/client-s3'
-    severity: error
-  - pattern: '\.putObject\('
-    message: 'SDK v2 method style — use s3.send(new PutObjectCommand(params)) in v3'
-    severity: recommended
+    - s3 bucket
+    - s3 upload
+    - presigned url
+    - object storage
+    - storage class
+    - s3 lifecycle
+    - s3 event
+    - s3 transfer
+    - glacier
+    - intelligent tiering
 ---
 
 # Amazon S3

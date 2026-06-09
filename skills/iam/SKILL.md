@@ -1,46 +1,50 @@
 ---
+strata_id: 4ea013df-925e-466b-9f0c-588b5d84726c
+type: note
+created: 2026-04-30T20:34:17+00:00
+modified: 2026-04-30T20:34:17.047245585+00:00
 name: iam
 description: AWS IAM guidance — identity, policies, roles, cross-account access, least privilege, permission boundaries. Use when configuring access control, debugging permission errors, or designing security.
 metadata:
-  priority: 8
-  docs:
-    - "https://docs.aws.amazon.com/IAM/latest/UserGuide/"
-    - "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html"
-  pathPatterns:
-    - 'iam/**'
-    - 'policies/**'
-    - '*-policy.json'
-    - '*-role.json'
-    - 'trust-policy.json'
   bashPatterns:
-    - '\baws\s+iam\b'
-    - '\baws\s+sts\b'
-    - '\baws\s+sso\b'
-    - '\baws\s+organizations\b'
+  - \baws\s+iam\b
+  - \baws\s+sts\b
+  - \baws\s+sso\b
+  - \baws\s+organizations\b
+  docs:
+  - https://docs.aws.amazon.com/IAM/latest/UserGuide/
+  - https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html
   importPatterns:
-    - "@aws-sdk/client-iam"
-    - "@aws-sdk/client-sts"
+  - '@aws-sdk/client-iam'
+  - '@aws-sdk/client-sts'
+  pathPatterns:
+  - iam/**
+  - policies/**
+  - '*-policy.json'
+  - '*-role.json'
+  - trust-policy.json
+  priority: 8
   promptSignals:
     phrases:
-      - "iam policy"
-      - "iam role"
-      - "permission denied"
-      - "access denied"
-      - "cross account"
-      - "assume role"
-      - "least privilege"
-      - "permission boundary"
-      - "service control policy"
-      - "aws permissions"
-      - "iam user"
-      - "security group"
+    - iam policy
+    - iam role
+    - permission denied
+    - access denied
+    - cross account
+    - assume role
+    - least privilege
+    - permission boundary
+    - service control policy
+    - aws permissions
+    - iam user
+    - security group
 validate:
-  - pattern: '"Effect"\s*:\s*"Allow"[^}]*"Resource"\s*:\s*"\*"'
-    message: 'Wildcard Resource (*) in Allow policy — restrict to specific ARNs for least privilege'
-    severity: error
-  - pattern: '"Action"\s*:\s*"\*"'
-    message: 'Wildcard Action (*) grants full access — restrict to specific actions needed'
-    severity: error
+- message: Wildcard Resource (*) in Allow policy — restrict to specific ARNs for least privilege
+  pattern: '"Effect"\s*:\s*"Allow"[^}]*"Resource"\s*:\s*"\*"'
+  severity: error
+- message: Wildcard Action (*) grants full access — restrict to specific actions needed
+  pattern: '"Action"\s*:\s*"\*"'
+  severity: error
 ---
 
 # AWS IAM

@@ -1,36 +1,40 @@
 ---
-name: bedrock
+strata_id: 8134930b-33bf-41f3-adc3-2b5cec21f2d2
+type: note
+created: 2026-04-30T20:50:46+00:00
+modified: 2026-04-30T20:50:46.318145229+00:00
 description: Amazon Bedrock guidance — foundation models, agents, knowledge bases, guardrails, fine-tuning, model evaluation. Use when building AI/ML features on AWS.
 metadata:
-  priority: 7
-  docs:
-    - "https://docs.aws.amazon.com/bedrock/latest/userguide/"
-  pathPatterns:
-    - 'bedrock/**'
-    - 'ai/**'
-    - 'ml/**'
-    - 'agents/**'
   bashPatterns:
-    - '\baws\s+bedrock\b'
-    - '\baws\s+bedrock-runtime\b'
-    - '\baws\s+bedrock-agent\b'
+  - \baws\s+bedrock\b
+  - \baws\s+bedrock-runtime\b
+  - \baws\s+bedrock-agent\b
+  docs:
+  - https://docs.aws.amazon.com/bedrock/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-bedrock"
-    - "@aws-sdk/client-bedrock-runtime"
-    - "@aws-sdk/client-bedrock-agent"
-    - "@aws-sdk/client-bedrock-agent-runtime"
+  - '@aws-sdk/client-bedrock'
+  - '@aws-sdk/client-bedrock-runtime'
+  - '@aws-sdk/client-bedrock-agent'
+  - '@aws-sdk/client-bedrock-agent-runtime'
+  pathPatterns:
+  - bedrock/**
+  - ai/**
+  - ml/**
+  - agents/**
+  priority: 7
   promptSignals:
     phrases:
-      - "bedrock"
-      - "foundation model"
-      - "claude on aws"
-      - "bedrock agent"
-      - "knowledge base"
-      - "bedrock guardrail"
-      - "model invocation"
-      - "bedrock fine-tuning"
-      - "titan"
-      - "anthropic on bedrock"
+    - bedrock
+    - foundation model
+    - claude on aws
+    - bedrock agent
+    - knowledge base
+    - bedrock guardrail
+    - model invocation
+    - bedrock fine-tuning
+    - titan
+    - anthropic on bedrock
+name: bedrock
 ---
 
 ## What It Is & When to Use It

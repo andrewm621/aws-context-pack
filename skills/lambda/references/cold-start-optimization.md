@@ -1,3 +1,10 @@
+---
+strata_id: 593c64ed-c07d-4385-a89f-71f9171b2ce3
+type: note
+created: 2026-05-01T18:35:50+00:00
+modified: 2026-05-01T18:35:50.272320255+00:00
+---
+
 # Lambda Cold Start Optimization
 
 ## What Causes Cold Starts

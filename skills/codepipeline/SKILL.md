@@ -1,43 +1,47 @@
 ---
-name: codepipeline
+strata_id: 2012cb85-f07e-4766-90e2-7121e9ef3d46
+type: note
+created: 2026-05-01T14:40:36+00:00
+modified: 2026-05-01T14:40:36.435412274+00:00
 description: AWS CI/CD guidance — CodePipeline, CodeBuild, CodeDeploy, pipeline stages, buildspec, deployment strategies, GitHub Actions integration. Use when building CI/CD pipelines on AWS.
 metadata:
-  priority: 5
-  docs:
-    - "https://docs.aws.amazon.com/codepipeline/latest/userguide/"
-    - "https://docs.aws.amazon.com/codebuild/latest/userguide/"
-  pathPatterns:
-    - 'buildspec.yml'
-    - 'buildspec.yaml'
-    - 'buildspec*.yml'
-    - 'appspec.yml'
-    - 'appspec.yaml'
-    - '.github/workflows/**'
-    - 'pipeline/**'
-    - 'cicd/**'
   bashPatterns:
-    - '\baws\s+codepipeline\b'
-    - '\baws\s+codebuild\b'
-    - '\baws\s+codedeploy\b'
+  - \baws\s+codepipeline\b
+  - \baws\s+codebuild\b
+  - \baws\s+codedeploy\b
+  docs:
+  - https://docs.aws.amazon.com/codepipeline/latest/userguide/
+  - https://docs.aws.amazon.com/codebuild/latest/userguide/
   importPatterns:
-    - "@aws-sdk/client-codepipeline"
-    - "@aws-sdk/client-codebuild"
-    - "@aws-sdk/client-codedeploy"
-    - "aws-cdk-lib/aws-codepipeline"
-    - "aws-cdk-lib/aws-codebuild"
-    - "aws-cdk-lib/aws-codepipeline-actions"
+  - '@aws-sdk/client-codepipeline'
+  - '@aws-sdk/client-codebuild'
+  - '@aws-sdk/client-codedeploy'
+  - aws-cdk-lib/aws-codepipeline
+  - aws-cdk-lib/aws-codebuild
+  - aws-cdk-lib/aws-codepipeline-actions
+  pathPatterns:
+  - buildspec.yml
+  - buildspec.yaml
+  - buildspec*.yml
+  - appspec.yml
+  - appspec.yaml
+  - .github/workflows/**
+  - pipeline/**
+  - cicd/**
+  priority: 5
   promptSignals:
     phrases:
-      - "codepipeline"
-      - "codebuild"
-      - "codedeploy"
-      - "buildspec"
-      - "ci/cd pipeline"
-      - "deployment pipeline"
-      - "blue green deploy"
-      - "github actions aws"
-      - "build project"
-      - "appspec"
+    - codepipeline
+    - codebuild
+    - codedeploy
+    - buildspec
+    - ci/cd pipeline
+    - deployment pipeline
+    - blue green deploy
+    - github actions aws
+    - build project
+    - appspec
+name: codepipeline
 ---
 
 # AWS CI/CD — CodePipeline, CodeBuild, CodeDeploy
